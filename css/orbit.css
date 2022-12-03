@@ -1,22 +1,36 @@
 #orbWrapper {
   position: absolute;
-  border: 5px dotted pink;
-  height: 600px;
-  width: 1200px;
   top: 0;
   right: 0;
   z-index: 1;
 }
 
-#orbDiv {
-  border: 2px solid black;
-}
-
 #orbCanvas {
-  border: 1px solid black;
   position: absolute;
   top: 0;
   left: 0;
+}
+
+#planetWrapper {
+  height: 140px;
+  width: 75px;
+  top: 141px;
+  right: 179px;
+  position: absolute;
+  z-index: 3;
+  overflow: hidden;
+}
+
+#planetRight {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  height: 215px;
+  width: 215px;
+  background-color: white;
+  border: 6px solid rgb(0, 174, 239);
+  border-radius: 550px;
+  z-index: 3;
 }
 
 @property --q1x {
@@ -82,12 +96,12 @@
 #orbDiv {
   --p0x: 393;
   --p0y: 164;
-  --p1x: 42;
-  --p1y: 201;
-  --p2x: 912;
+  --p1x: 62;
+  --p1y: 221;
+  --p2x: 902;
   --p2y: 461;
   --p3x: 552;
-  --p3y: 223;
+  --p3y: 213;
 }
 
 #orb {
@@ -104,8 +118,8 @@
           animation-name: q1, q2, q3, q4, q5, q6, progress;
   -webkit-animation-duration: 13s;
           animation-duration: 13s;
-  -webkit-animation-timing-function: linear;
-          animation-timing-function: linear;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
   -webkit-animation-iteration-count: infinite;
           animation-iteration-count: infinite;
   animation-direction: reverse;
