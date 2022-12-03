@@ -1,38 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link href="css/index.css" type="text/css" rel="stylesheet">
+  <link href="css/orbit.css" rel="stylesheet">
+  <meta name="viewport" content="width=device-width">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;700&family=Playfair+Display:ital,wght@1,400;1,500&display=swap" rel="stylesheet">
-  <meta name="viewport" content="width=device-width">
+  
   <title>Matt's UX Portfolio</title>
-  <!-- ====================BootstrapTemplateIncludes=================== -->
-    <!-- Favicons -->
-    <link href="assets/img/favicon.png" rel="icon">
-    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
-  
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
-  
-    <!-- Vendor CSS Files -->
-    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-    <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-  
-    <!-- Template Main CSS File -->
-    <link href="assets/css/style.css" rel="stylesheet">
-  
-    <!-- =======================================================
-    * Template Name: Appland - v4.9.1
-    * Template URL: https://bootstrapmade.com/free-bootstrap-app-landing-page-template/
-    * Author: BootstrapMade.com
-    * License: https://bootstrapmade.com/license/
-    ======================================================== -->
 </head>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-MS2VLZ42WJ"></script>
@@ -45,7 +22,8 @@
 </script>
 <body>
 
-  <nav id="navBar">
+
+  <nav id="navBar" class="">
     <div id="navigation">
       <div id="home" class="nav active highlight"><img src="img/logo.png"></div>
       <div id="proj1" class="nav"><img src="img/proj1.png"></div>
@@ -62,20 +40,32 @@
     </div>
   </nav>
   <!--Start Home Page Content-->
+
   <section id="p0Content" class="">
     <div id="heroSection" class="textStyles">
       <img id="heroImg" src="img/heroimg-blank.png">
       <img id="cloud1" class="anim" src="img/cloud-200x85.png">
       <img id="cloud2" class="anim" src="img/cloud-200x85.png">
-      <img id="star1" class="anim" src="img/star-75x75.png">
       <img id="star2" class="anim" src="img/star2-25x25.png">
       <img id="planet2" class="anim" src="img/planet2-200x175.png">
-      <img id="rocket" class="anim" src="img/rocket-two-tones.png">
+      <img id="planet1" class="anim" src="img/planet1-375x250-alt.png">
 
-      <img id="planet1" class="anim" src="img/planet1-375x250.png">
-      <!--<img id="orbit" class="anim" src="img/circle-70x70.png">-->
+      <div id="orbWrapper">
+        <div id="orbDiv">
+          <canvas id="orbCanvas" height="600" width="1200"></canvas>
+          <input type="checkbox" id="show-construction" checked/>
+          <label for="show-construction">Show Construction</label>
+          <div id="orb"><div id="orbitBall" class="cart"></div></div>
+        </div>
+      </div>
+
+      <!--
+      <img id="star1" class="anim" src="img/star-75x75.png">
+      <img id="rocket" class="anim" src="img/rocket-two-tones.png">  
+      <img id="orbit" class="anim" src="img/circle-70x70.png">
       <canvas id="orbitCanvas" class="anim"></canvas>
       <div id="orbitBall" class="cart"></div></div>
+      -->
     </div>
     <div id="p0s0"></div>
     <div id="p0s1"></div>
@@ -546,7 +536,6 @@
 
   <!-- Start Project 3 Content -->
   <section id="p3Content" class="pContent hide">
-    <!-- Remove Sidebar Temporarily *
     <div class="sidebar">
       
       <div class="scrollBar">
@@ -559,8 +548,7 @@
 
       <style>
         #draggable { width: 150px; height: 150px; padding: 0.5em; }
-      </style>
-
+        </style>
       <div class="scrollLine"></div>
       
       <div class="leftNav">
@@ -591,320 +579,115 @@
         <div class="btn6">Conclusion</div>
       </div>
     </div><!-- End Sidebar -->
-    
-    <!-- ======= Hero Section ======= -->
-  <section id="hero" class="d-flex align-items-center">
-
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-6 d-lg-flex flex-lg-column justify-content-center align-items-stretch pt-5 pt-lg-0 order-2 order-lg-1" data-aos="fade-up">
-          <div>
-            <h1>Case Study: RescueCats.org - Responsive Web Redesign</h1>
-            <div style="height: 30px;"></div>
-            <h2>With over 8,000 cats saved in the last 20 years, Rescue Cats has the potential to save even more with a revamped website that helps streamline the adoption process and prioritizes information on pet care, hopefully garnering more site traffic and donations.</h2>
-            <h2>Over the course of 3 weeks, our team of 5 analyzed the existing site and determined the best plan for improvement. We created mobile and web wireframes and developed them into high-fidelity prototypes.</h2>
-          </div>
+    </div>
+    <div id="p3s0" class="pOverview section pCenter textStyles">
+      <div class="pTitle">
+        <h4>RescueCats</h4>
+      </div>
+      <div class="pSection">
+        <div class="pDesc">
+          <h2>Summary</h2>
+          <p>Here's an overview of the project.</p>
         </div>
-        <div class="col-lg-6 d-lg-flex flex-lg-column align-items-stretch order-1 order-lg-2 hero-img" data-aos="fade-up">
-          <img src="assets/img/hero-img.png" class="img-fluid" alt="">
+        <div class="pImg">
+          <p><img src="img/proj3.png" class="nav"></p>
         </div>
       </div>
     </div>
-
-  </section><!-- End Hero -->
-
-  <main id="main">
-
-    <!-- ======= App Features Section ======= -->
-    <section id="features" class="features">
-      <div class="container">
-
-        <div class="section-title">
-          <h2>My Role</h2>
-          <h3 style="padding-left: 15%; padding-right: 15%;">I took primary responsibility for the visual design and style guide.</h3>
-          <p>Each member of the team contributed to all steps of the redesign process. My notable contributions are listed below.</p>
-        </div>
-
-        <div class="row no-gutters">
-          <div class="col-xl-7 d-flex align-items-stretch order-2 order-lg-1">
-            <div class="content d-flex flex-column justify-content-center">
-              <div class="row">
-                <div class="col-md-6 icon-box" data-aos="fade-up">
-                  <i class="bx bx-receipt" style="color: #faaf5e;"></i>
-                  <h4>Research</h4>
-                  <p>Conducted user interviews to identify pain points. Completed usability heuristics analysis of existing site.</p>
-                </div>
-                <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="100">
-
-                  <i class="bx bx-id-card" style="color: #faaf5e;"></i>
-                  <h4>Empathize</h4>
-                  <p>Conducted user surveys and used data to create User Persona. Created 'I like, I Wish, What If' analysis.</p>
-                </div>
-                <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="200">
-                  <i class="bx bx-cube-alt" style="color: #faaf5e;"></i>
-                  <h4>Definition</h4>
-                  <p>Contributed to developing the problem statement we used to focus our efforts.</p>
-                </div>
-                <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="300">
-                  <i class="bx bx-images" style="color: #faaf5e;"></i>
-                  <h4>Prototype</h4>
-                  <p>Worked in Figma to create wireframes. Created hero carousel slideshow. Created navigation menu overlays.</p>
-                </div>
-                <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="400">
-                  <i class="bx bx-atom" style="color: #faaf5e;"></i>
-                  <h4>Test</h4>
-                  <p>Tested lo-fi wireframes with multiple users to gain insight on improvements needed.</p>
-                </div>
-                <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="500">
-                  <i class="bx bx-shield" style="color: #faaf5e;"></i>
-                  <h4>Iterate</h4>
-                  <p>Used feedback to inform hi-fi prototype application process. Refined visual design to complete and apply the UI Style Guide based on team and user feedback.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="image col-xl-5 d-flex align-items-stretch justify-content-center order-1 order-lg-2" data-aos="fade-left" data-aos-delay="100">
-            <img src="assets/img/astroLeft.png" class="img-fluid" alt="">
-          </div>
-        </div>
-
+    <div id="p3s1" class="pSection1 section pLeft textStyles">
+      <div class="pTitle">
+        <h4>Research</h4>
       </div>
-    </section><!-- End App Features Section -->
-
-    <!-- ======= Details Section ======= -->
-    <section id="details" class="details">
-      <div class="container">
-
-        <div class="row content">
-          <div class="col-md-8" data-aos="fade-right">
-            <img src="img/RescueCats/heuristics.png" class="img-fluid" alt="Usability Heuristics">
-          </div>
-          <div class="col-md-4 pt-4" data-aos="fade-up">
-            <h3>Research</h3>
-            <p>
-              As a group, we created an executed our research plan. We used various methodologies: five user interviews to collect qualitative data from participants, a quantitative survey sent via social media receiving 40 results, competitve analysis, and a heuristics evaluation on usability principles.
-            </p>
-            <p>
-              We found that the existing site had many usability issues that drove users away.
-            </p>
-            <img src="img/RescueCats/cat1.png" class="img-fluid" alt="Silhoette of a black cat">
-          </div>
+      <div class="pSection">
+        <div class="pDesc">
+          <h2>Summary</h2>
+          <p>Research copy...</p>
         </div>
-
-        <div class="row content">
-          <div class="col-md-12" data-aos="fade-up">
-            <blockquote class="quote rc-quote-border">
-              <p>
-
-                  “The hardest part about adopting was feeling anxious about making the right decision with limited information about the animal.”
-
-              </p>
-            </blockquote>
-            
-          </div>
-        </div>
-
-        <div class="row content">
-          <div class="col-md-3 order-3 order-md-3" data-aos="fade-left">
-            <img src="img/RescueCats/RescueCatsHome.png" class="img-fluid rc-border" alt="Original home page screenshot">
-          </div>
-          <div class="col-md-4 order-3 order-md-3" data-aos="fade-left">
-            <img src="img/RescueCats/RescueCats-UserPersona.png" class="img-fluid rc-border" alt="User persona">
-          </div>
-          <div class="col-md-1 order-2 order-md-2" data-aos="fade-left"></div>
-          <div class="col-md-4 pt-5 order-1 order-md-1" data-aos="fade-up">
-            <h3>Problem Statement</h3>
-            <p>
-              We determined that the current site is not providing a user-friendly navigation system, which is causing users to seek other rescue nonprofit organizations to support since information is difficult to find.
-            </p>
-            <p>
-              We believe that with our redesign users will be able to navigate the site to effectively find information about adopting cats from RescueCats.org.
-            </p>
-            <img src="img/RescueCats/fish.png" class="img-fluid" alt="Silhoette of a black cat">
-          </div>
-        </div>
-        
-
-        <div class="row content">
-          <div class="col-md-6" data-aos="fade-right">
-            <img src="img/RescueCats/lofi-prototype.gif" class="img-fluid" alt="">
-          </div>
-          <div class="col-md-6 pt-5" data-aos="fade-up">
-            <h3>Wireframes & Iterations</h3>
-            <p>
-              After determining the necessary features to achieve our goal, we created sketches to explore ideas for layout and navigation.
-            </p>
-            <p>
-              We created a lo-fi prototype and conducted user testing. We were able to adjust our navigation menu to meet user needs, provide the user with page and progress indicators, and added instructions for filtering available cats.
-            </p>
-            <p><img src="img/RescueCats/pawprints.png" style="width: 60%; display: block; margin-left: auto; margin-right: auto;" class="img-fluid" alt="Silhoette of a black cat"></p>    
-          </div>
-        </div>
-
-        <div class="row content">
-          <div class="col-md-8 order-1 order-md-2" data-aos="fade-left">
-            <img src="img/RescueCats/RescueCats-StyleGuide.png" class="img-fluid rc-border" alt="UI Style Guide">
-          </div>
-          <div class="col-md-4 pt-5 order-2 order-md-1" data-aos="fade-up">
-            <h3>UI Style Guide</h3>
-            <p>
-              With team feedback, I created a style guide. 
-              <ul  class="fst-italic">
-                <li><i class="bi bi-check" style="color: #faaf5e"></i> We wanted to give our users easily identifiable UI elements to make it easy to navigate.</li>
-                <li><i class="bi bi-check" style="color: #faaf5e"></i> Flat colors and material design inform the user in a fun and playful way.</li>
-                <li><i class="bi bi-check" style="color: #faaf5e"></i> Using iconography throughout and a cartoon-look on our interactions help make for a delightful user experience.</li>
-                <li><i class="bi bi-check" style="color: #faaf5e"></i> An inviting style that makes users comfortable finding their new family member was our goal.</li>
-              </ul>
-            </p>
-            <p><img src="img/RescueCats/yarn.png" style="width: 60%; display: block; margin-left: auto; margin-right: auto;" class="img-fluid" alt="Ball of yarn"></p>    
-          </div>
-        </div>
-
-        <div class="row content">
- 
-        </div>
-
-        <div class="row content">
-          <div class="col-md-12 pt-5" data-aos="fade-up" style="text-align: center;">
-            <h3>High-Fidelity Prototypes</h3>
-            <p>
-              We applied the style to create hi-fi Figma clickable prototypes and tested them with more users.
-            </p><p></p>
-          </div>
-          <div class="col-md-12" data-aos="fade-up" alt="Web Prototype Figma Embed">
-            <!-- Figma Prototype iFrame -->
-            <iframe style="border: 1px solid rgba(0, 0, 0, 0.1); width: 100%; margin-left: auto; margin-right: auto;" width="950" height="750" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2F5Xo26OdodPVcfUSoPM9snC%2FWebpage-Prototype%3Fpage-id%3D5%253A2%26node-id%3D225%253A10294%26viewport%3D682%252C311%252C0.06%26scaling%3Dcontain%26starting-point-node-id%3D225%253A10294" allowfullscreen></iframe>
-          </div>
-          <p></p><p style="text-align: center;">
-            <a href="https://www.figma.com/proto/5Xo26OdodPVcfUSoPM9snC/Webpage-Prototype?page-id=5%3A2&node-id=225%3A10294&viewport=682%2C311%2C0.06&scaling=contain&starting-point-node-id=225%3A10294">Click Here for Figma Prototype</a>
-          </p>
-          <!-- Mobile Figma
-          <div class="col-md-3" data-aos="fade-up" alt="Mobile Prototype Figma Embed">
-            <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="375" height="750" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FolNgZ8w2cIpuGaHWjY3tth%2FMobile-Prototype%3Fpage-id%3D1%253A2%26node-id%3D46%253A2922%26viewport%3D995%252C741%252C0.22%26scaling%3Dscale-down%26starting-point-node-id%3D46%253A2922" allowfullscreen></iframe>
-          </div>
-          -->
-        </div>
-      </div>
-    </section><!-- End Details Section -->
-
-    <!-- ======= Gallery Section ======= -->
-    <section id="gallery" class="gallery">
-      <div class="container" data-aos="fade-up">
-
-        <div class="section-title">
-          <h2>Mobile Prototype</h2>
-          <p>Our goal was to create a responsive website, so we created a mobile prototype as well.</p>
-        </div>
-
-      </div>
-
-      <div class="container-fluid" data-aos="fade-up">
-        <div class="gallery-slider swiper">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide"><a href="img/RescueCats/mobileSlides/mobile-prototype-slides01.png" class="gallery-lightbox" data-gall="gallery-carousel"><img src="img/RescueCats/mobileSlides/mobile-prototype-slides01.png" class="img-fluid" alt=""></a></div>
-            <div class="swiper-slide"><a href="img/RescueCats/mobileSlides/mobile-prototype-slides02.png" class="gallery-lightbox" data-gall="gallery-carousel"><img src="img/RescueCats/mobileSlides/mobile-prototype-slides02.png" class="img-fluid" alt=""></a></div>
-            <div class="swiper-slide"><a href="img/RescueCats/mobileSlides/mobile-prototype-slides03.png" class="gallery-lightbox" data-gall="gallery-carousel"><img src="img/RescueCats/mobileSlides/mobile-prototype-slides03.png" class="img-fluid" alt=""></a></div>
-            <div class="swiper-slide"><a href="img/RescueCats/mobileSlides/mobile-prototype-slides04.png" class="gallery-lightbox" data-gall="gallery-carousel"><img src="img/RescueCats/mobileSlides/mobile-prototype-slides04.png" class="img-fluid" alt=""></a></div>
-            <div class="swiper-slide"><a href="img/RescueCats/mobileSlides/mobile-prototype-slides05.png" class="gallery-lightbox" data-gall="gallery-carousel"><img src="img/RescueCats/mobileSlides/mobile-prototype-slides05.png" class="img-fluid" alt=""></a></div>
-            <div class="swiper-slide"><a href="img/RescueCats/mobileSlides/mobile-prototype-slides06.png" class="gallery-lightbox" data-gall="gallery-carousel"><img src="img/RescueCats/mobileSlides/mobile-prototype-slides06.png" class="img-fluid" alt=""></a></div>
-            <div class="swiper-slide"><a href="img/RescueCats/mobileSlides/mobile-prototype-slides07.png" class="gallery-lightbox" data-gall="gallery-carousel"><img src="img/RescueCats/mobileSlides/mobile-prototype-slides07.png" class="img-fluid" alt=""></a></div>
-            <div class="swiper-slide"><a href="img/RescueCats/mobileSlides/mobile-prototype-slides08.png" class="gallery-lightbox" data-gall="gallery-carousel"><img src="img/RescueCats/mobileSlides/mobile-prototype-slides08.png" class="img-fluid" alt=""></a></div>
-            <div class="swiper-slide"><a href="img/RescueCats/mobileSlides/mobile-prototype-slides09.png" class="gallery-lightbox" data-gall="gallery-carousel"><img src="img/RescueCats/mobileSlides/mobile-prototype-slides09.png" class="img-fluid" alt=""></a></div>
-          </div>
-          <div class="swiper-pagination"></div>
-        </div>
-
-        <p></p><p style="text-align: center;">
-          <a href="https://www.figma.com/proto/olNgZ8w2cIpuGaHWjY3tth/Mobile-Prototype?page-id=1%3A2&node-id=230%3A1441&viewport=995%2C741%2C0.22&scaling=scale-down&starting-point-node-id=46%3A2922">Click Here for Figma Mobile Prototype</a>
-        </p>
-
-      </div>
-    </section><!-- End Gallery Section -->
-
-    <section id="conclusion">
-      <div class="row content">
-        <div class="col-md-1 pt-5"></div>
-        <div class="col-md-10 pt-5" data-aos="fade-up" style="text-align: center;">
-          <p><img src="img/RescueCatsLogo.png" class="img-fluid" alt="Ball of yarn"></p>
-          <h3>Conclusion</h3><p></p>
-          <p>
-            Our responsive redesign was successful in improving ease-of-use and customer confidence. Planning and executing our research allowed us to focus our efforts on what was most important and even what our end goal should be. User testing was critical for making iterations to our designs throughout the process. We were also able to create interactions that provided the user with a delightful experience.
-          </p><p></p>
+        <div class="pImg">
+          <p><img src="img/proj3.png" class="nav"></p>
         </div>
       </div>
     </div>
-    </section>
-
-    <!-- ======= Frequently Asked Questions Section ======= -->
-    <section id="faq" class="faq section-bg">
-      <div class="container" data-aos="fade-up">
-
-        <div class="section-title">
-          <h2>Frequently Asked Questions</h2>
-        </div>
-
-        <div class="accordion-list">
-          <ul>
-            <li data-aos="fade-up">
-              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" class="collapse" data-bs-target="#accordion-list-1">Why was this case study created?<i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
-              <div id="accordion-list-1" class="collapse show" data-bs-parent=".accordion-list">
-                <p>
-                  This group project was created to demonstrate responsive web design for a Georgia Tech UI/UX Bootcamp in 2022.
-                </p>
-              </div>
-            </li>
-
-            <li data-aos="fade-up" data-aos-delay="100">
-              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#accordion-list-2" class="collapsed">How many members were on the team?<i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
-              <div id="accordion-list-2" class="collapse" data-bs-parent=".accordion-list">
-                <p>
-                  Five team members.
-                </p>
-              </div>
-            </li>
-
-            <li data-aos="fade-up" data-aos-delay="200">
-              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#accordion-list-3" class="collapsed">How long did this project take?<i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
-              <div id="accordion-list-3" class="collapse" data-bs-parent=".accordion-list">
-                <p>
-                  We completed this project over a three week period.
-                </p>
-              </div>
-            </li>
-
-            <li data-aos="fade-up" data-aos-delay="300">
-              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#accordion-list-4" class="collapsed">What did you learn about UX/UI Design from this project?<i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
-              <div id="accordion-list-4" class="collapse" data-bs-parent=".accordion-list">
-                <p>
-                  Working as a team to utilize each individuals strengths. Focusing on the user needs using feedback throughout. Limiting scope to complete the project on time.
-                </p>
-              </div>
-            </li>
-
-          </ul>
-        </div>
-
+    <div id="p3s2" class="pSection2 section pRight textStyles">
+      <div class="pTitle">
+        <h4>Definition</h4>
       </div>
-    </section><!-- End Frequently Asked Questions Section -->
-    <!-- End Project 3 Content -->
+      <div class="pSection">
+        <div class="pDesc">
+          <h2>Summary</h2>
+          <p>Research copy...</p>
+        </div>
+        <div class="pImg">
+          <p><img src="img/proj3.png" class="nav"></p>
+        </div>
+      </div>
+    </div>
+    <div id="p3s3" class="pSection3 section pLeft textStyles">
+      <div class="pTitle">
+        <h4>Ideation</h4>
+      </div>
+      <div class="pSection">
+        <div class="pDesc">
+          <h2>Summary</h2>
+          <p>Research copy...</p>
+        </div>
+        <div class="pImg">
+          <p><img src="img/proj3.png" class="nav"></p>
+        </div>
+      </div>
+    </div>
+    <div id="p3s4" class="pSection4 section pRight textStyles">
+      <div class="pTitle">
+        <h4>Prototyping</h4>
+      </div>
+      <div class="pSection">
+        <div class="pDesc">
+          <h2>Summary</h2>
+          <p>Research copy...</p>
+        </div>
+        <div class="pImg">
+          <p><img src="img/proj3.png" class="nav"></p>
+        </div>
+      </div>
+    </div>
+    <div id="p3s5" class="pSection5 section pLeft textStyles">
+      <div class="pTitle">
+        <h4>Testing</h4>
+      </div>
+      <div class="pSection">
+        <div class="pDesc">
+          <h2>Summary</h2>
+          <p>Research copy...</p>
+        </div>
+        <div class="pImg">
+          <p><img src="img/proj3.png" class="nav"></p>
+        </div>
+      </div>
+    </div>
+    <div id="p3s6" class="pSection6 section pCenter textStyles">
+      <div class="pTitle">
+        <h4>Conclusion</h4>
+      </div>
+      <div class="pSection">
+        <div class="pDesc">
+          <h2>Summary</h2>
+          <p>Research copy...</p>
+        </div>
+        <div class="pImg">
+          <p><img src="img/proj3.png" class="nav"></p>
+        </div>
+      </div>
+    </div>
+  </section><!-- End Project 3 Content -->
     <div class="footer">
       <h1>Footer</h1>
     </div>
   </div>
-    <!-- Vendor JS Files -->
-    <script src="assets/vendor/aos/aos.js"></script>
-    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-    <script src="assets/vendor/php-email-form/validate.js"></script>
-  
-    <!-- Template Main JS File -->
-    <script src="assets/js/main.js"></script>
   
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
   <script src="js/index.js"></script>
   <script src="js/jquery.waypoints.js"></script>
   <script src="js/jquery-ui.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <script src="js/orbit.js"></script>
 </body>
 </html>
