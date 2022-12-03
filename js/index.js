@@ -321,7 +321,7 @@ $(document).ready(function() {
         $('#cloud1').animate({
             'right':'-200px'
         }
-            ,26000, 'linear'
+            ,52000, 'linear'
         )
         .animate(
             {'right':'1600px'}
@@ -334,9 +334,9 @@ $(document).ready(function() {
 $(document).ready(function() {   
     function animateCloud2() {
         $('#cloud2').animate({
-            'left':'1000px'
+            'left':'1400px'
         }
-            ,36000, 'linear'
+            ,25000, 'linear'
         )
         .animate(
             {'left':'100px'}

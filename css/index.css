@@ -20,16 +20,16 @@ body {
   z-index: 3;
 }
 #heroImg {
-  z-index: 99 !important;
+  position: absolute;
+  z-index: 4;
 }
 #cloud1 {
-  top: 230px;
-  z-index: -3 !important;
+  top: 235px;
 }
 #cloud2 {
-  top: 280px;
+  top: 285px;
   left: 440px;
-  z-index: -33 !important;
+
 }
 #star1 {
   top: 255px;
@@ -449,7 +449,7 @@ h4 {
   color: rgba(0,174,239,0)
 }
 
-/* Media Queries 
+/* Media Queries */
 @media only screen and (max-width: 1200px) {
   #mainContent {
     margin: 0px 1%;
@@ -471,9 +471,18 @@ h4 {
     width: 1500px;
     margin-left: -30px;
   }
+  .anim {
+    display: none;
+  }
+  .desk {
+    display: none;
+  }
 }
 @media only screen and (max-width: 900px) {
   .anim {
+    display: none;
+  }
+  .desk {
     display: none;
   }
   #navigation img {
@@ -483,6 +492,9 @@ h4 {
 }
 @media only screen and (max-width: 600px) {
   .anim {
+    display: none;
+  }
+  .desk {
     display: none;
   }
   #navBar {
