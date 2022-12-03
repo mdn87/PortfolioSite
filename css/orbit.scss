@@ -8,7 +8,6 @@
 
 }
 #orbCanvas { 
-
   position: absolute;
   top: 0;
   left: 0;
@@ -16,10 +15,10 @@
 #planetWrapper {
   height: 140px;
   width: 75px;
-  top: 141px;
+  top: 148px;
   right: 179px;
   position: absolute;
-  z-index: 3;
+  z-index: 2;
   overflow: hidden;
 }
 #planetRight {
@@ -31,9 +30,19 @@
   background-color: white;
   border: 6px solid rgba(0,174,239,1);
   border-radius: 550px;
-  z-index: 3;
 }
-
+#orbitBall {
+  background-color: white;
+  height: 45px;
+  width: 45px;
+  border: 6px solid rgba(0,174,239,1);
+  border-radius: 50px;
+}
+#planet1 {
+  right: 110px;
+  top: 130px;
+  z-index: -1 !important;
+}
 
 @for $i from 1 to 7 {
   @property --q#{$i}x {
@@ -65,7 +74,7 @@
   left: calc(-16px + 1px * var(--q6x));
   font-size: 24px;
   animation-name: q1, q2, q3, q4, q5, q6, progress;
-  animation-duration: 13s;
+  animation-duration: 23s;
   animation-timing-function: ease-in-out;
   animation-iteration-count: infinite;
   animation-direction: reverse;

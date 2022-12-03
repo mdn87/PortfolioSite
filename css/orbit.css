@@ -14,10 +14,10 @@
 #planetWrapper {
   height: 140px;
   width: 75px;
-  top: 141px;
+  top: 148px;
   right: 179px;
   position: absolute;
-  z-index: 3;
+  z-index: 2;
   overflow: hidden;
 }
 
@@ -30,7 +30,20 @@
   background-color: white;
   border: 6px solid rgb(0, 174, 239);
   border-radius: 550px;
-  z-index: 3;
+}
+
+#orbitBall {
+  background-color: white;
+  height: 45px;
+  width: 45px;
+  border: 6px solid rgb(0, 174, 239);
+  border-radius: 50px;
+}
+
+#planet1 {
+  right: 110px;
+  top: 130px;
+  z-index: -1 !important;
 }
 
 @property --q1x {
@@ -116,8 +129,8 @@
   font-size: 24px;
   -webkit-animation-name: q1, q2, q3, q4, q5, q6, progress;
           animation-name: q1, q2, q3, q4, q5, q6, progress;
-  -webkit-animation-duration: 13s;
-          animation-duration: 13s;
+  -webkit-animation-duration: 23s;
+          animation-duration: 23s;
   -webkit-animation-timing-function: ease-in-out;
           animation-timing-function: ease-in-out;
   -webkit-animation-iteration-count: infinite;

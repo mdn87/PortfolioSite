@@ -2,51 +2,6 @@ body {
 
 }
 
-
-#planetMover {
-  width: 250px;
-  height: 250px;
-  border: 17px solid green;
-
-}
-/*
-#orbit {
-  width: 50px;
-  height: 50px;
-  border: 15px solid red;
-  left: 0;
-  top: 268px;
-  animation: x 4s linear forwards,
-    y 4s linear forwards;
-  animation-delay: 0s, 0s;
-  animation-iteration-count: infinite;
-}
-
-#orbCanvas {
-  width: 300px;
-  height 200px;
-  border: 5px solid pink;
-  animation: x 4s linear forwards,
-  y 4s linear forwards;
-  animation-delay: 0s, 0s;
-  animation-iteration-count: infinite;  
-}
-*/
-#orbitBall {
-  background-color: white;
-  height: 45px;
-  width: 45px;
-  border: 6px solid rgba(0,174,239,1);
-  border-radius: 50px;
-}
-#planet1 {
-  right: 110px;
-  top: 130px;
-  z-index: -1 !important;
-}
-
-
-
 @keyframes x {
   to {
     left: 120px;
@@ -62,17 +17,19 @@ body {
 /* Hero Animation */
 .anim {
   position: absolute;
-  z-index: -1;
+  z-index: 3;
 }
 #heroImg {
-  z-index: 0;
+  z-index: 99 !important;
 }
 #cloud1 {
   top: 230px;
+  z-index: -3 !important;
 }
 #cloud2 {
   top: 280px;
   left: 440px;
+  z-index: -33 !important;
 }
 #star1 {
   top: 255px;

@@ -5,6 +5,8 @@
   <link href="css/orbit.css" rel="stylesheet">
   <meta name="viewport" content="width=device-width">
 
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;700&family=Playfair+Display:ital,wght@1,400;1,500&display=swap" rel="stylesheet">
@@ -43,13 +45,16 @@
 
   <section id="p0Content" class="">
     <div id="heroSection" class="textStyles">
-      <img id="heroImg" src="img/heroimg-blank.png">
       <img id="cloud1" class="anim" src="img/cloud-200x85.png">
       <img id="cloud2" class="anim" src="img/cloud-200x85.png">
+      <img id="heroImg" src="img/heroimg-blank.png">
+
       <img id="star2" class="anim" src="img/star2-25x25.png">
       <img id="planet2" class="anim" src="img/planet2-200x175.png">
       <img id="planet1" class="anim" src="img/planet1-375x250-alt.png">
-      <div id="planetWrapper"><div id="planetRight"></div></div>
+      <div id="planetWrapper">
+        <div id="planetRight"></div>
+      </div>
       <div id="orbWrapper">
         <div id="orbDiv">
           <canvas id="orbCanvas" height="600" width="1200"></canvas>
@@ -62,9 +67,6 @@
       <!--
       <img id="star1" class="anim" src="img/star-75x75.png">
       <img id="rocket" class="anim" src="img/rocket-two-tones.png">  
-      <img id="orbit" class="anim" src="img/circle-70x70.png">
-      <canvas id="orbitCanvas" class="anim"></canvas>
-      <div id="orbitBall" class="cart"></div></div>
       -->
     </div>
     <div id="p0s0"></div>
@@ -689,5 +691,8 @@
   <script src="js/jquery.waypoints.js"></script>
   <script src="js/jquery-ui.min.js"></script>
   <script src="js/orbit.js"></script>
+
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
 </body>
 </html>
