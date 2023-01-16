@@ -307,6 +307,32 @@ h4 {
   grid-area: pSection6;
 }
 
+/* Case Study 2 */
+
+.dhsLogo {
+  width: 350px;
+  border: 2px dotted red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.dhsText {
+  font-family: 'Crete Round', serif;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 15px;
+  color: rgba(40,96,144,1);
+  font-size: 18pt;
+  font-weight: 500;
+}
+.dhsLogoImg {
+  width: 240px;
+  height: 240px;
+  margin: 20px;
+  border: 2px dotted blue;
+}
+
 /* Sidebar */
 .leftNav {
   font-family: 'Montserrat', sans-serif;
