@@ -12,6 +12,16 @@ $(document).ready(function() {
     }
   });
 
+// Zoom case study images
+  $('.zImg').on('click', function(){
+    console.log('Clicked zImg');
+    if(!$(this).hasClass('zoomed')){
+      $(this).addClass('zoomed');
+    }else{
+      $(this).removeClass('zoomed');
+    }
+  });
+
 // Animate nav and load project page on click
   var currentPage = 0;
   $('.nav').on('click', function(){
