@@ -14,11 +14,14 @@ $(document).ready(function() {
 
 // Zoom case study images
   $('.zImg').on('click', function(){
-    console.log('Clicked zImg');
+    const para = document.createElement("zImgBox");
+    const node = document.createTextNode("This is new.");
     if(!$(this).hasClass('zoomed')){
-      $(this).addClass('zoomed');
+      console.log('Clicked zImg');
+      //$(this).addClass('zoomed');
     }else{
-      $(this).removeClass('zoomed');
+      console.log('ClickedOff zImg');
+      //$(this).removeClass('zoomed');
     }
   });
 
