@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;700&family=Playfair+Display:ital,wght@1,400;1,500&display=swap" rel="stylesheet">
-  
+  <link href="https://fonts.googleapis.com/css2?family=Crete+Round&display=swap" rel="stylesheet">
   <title>Matt's UX Portfolio</title>
 </head>
 <!-- Google tag (gtag.js) -->
@@ -42,8 +42,7 @@
     </div>
   </nav>
   <!--Start Home Page Content-->
-
-  <section id="p0Content" class="">
+  <section id="p0Content" class="hide">
     <div id="heroSection" class="textStyles">
       <img id="cloud1" class="anim" src="img/cloud-200x85.png">
       <img id="cloud2" class="anim" src="img/cloud-200x85.png">
@@ -436,101 +435,250 @@
         <div class="btn6">Conclusion</div>
       </div>
     </div><!-- End Sidebar -->
-    <div id="p2s0" class="pSection0 pOverview section pCenter textStyles">
-      <div class="pTitle">
-        <h4>DoHS</h4>
-      </div>
+    <div id="p2s0" class="pOverview section pCenter textStyles">
       <div class="pSection">
         <div class="pDesc">
-          <h2>Summary</h2>
-          <p>Here's an overview of the project.</p>
+          <h2>Case Study: DHS.gov - Government Agency Web and Mobile Redesign</h2>
+          <p>This individual student project was completed over the course of 4 weeks. The goal was to analyze and redesign a government agency website for improved usability and responsiveness. Improving and standardizing the visual design of the site to better fit the users perception of the agency was a key part of the process.</p>
+          <h2>My Role</h2>
+          <p>Design thinking was employed to tackle the full cycle of a redesign project. I took on the roles of UX Researcher, Information Architect, UI/UX Designer and Visual Designer.</p>
         </div>
-        <div class="pImg">
-          <p><img src="img/proj2.png" class="nav"></p>
+        <div class="dhsLogo">
+          <div class="pImg dhsLogoImg">
+            <p><img src="img/dhsimg/dhsLogo.png" class=""></p>
+          </div>
+          <div class="dhsText">Homeland</div>
+          <div class="dhsText">Security</div>
         </div>
       </div>
+      <div class="lunarSurface">
+        <img src="img/lunar-surface.png">
+        <img src="img/astronaut.png" class="astronaut">
+      </div>
     </div>
+    
     <div id="p2s1" class="pSection1 section pLeft textStyles">
       <div class="pTitle">
-        <h4>Research</h4>
+        <h4>The Beginning</h4>
       </div>
       <div class="pSection">
         <div class="pDesc">
-          <h2>Summary</h2>
-          <p>Research copy...</p>
+          <h2>Initial User Research:</h2>
+          <p>I used traffic analysis of the website to establish the most common types of users and tasks. To help inform our usability research we created a proto-persona.
+
+            Website Traffic Analysis
+            Most common searches and traffic was related to entering the country
+            Demographics
+            Majority of traffic is men and women ages 25 to 45
+            </p>
         </div>
         <div class="pImg">
-          <p><img src="img/proj2.png" class="nav"></p>
+          <p><img src="img/dhsimg/Demographics1.png" class="zImg"></p>
         </div>
       </div>
+      <div class="pCenter2">
+        <h2 class="hLeft">ProtoPersona</h2>
+        <p>Meet Lukas, our imaginary typical user based on my research, who will help us understand the challenges those users may face when using the site.</p>
+        <img src="img/dhsimg/ProtoPersona.png" class="cImg">
+        <p></p>
+        <p>Lukas is traveling to the US for business from Germany and needs to find information about the requirements for aliens entering the country. He knows he needs some sort of electronic documentation, but has never done it before.</p>
+      </div>
+
+      
     </div>
-    <div id="p2s2" class="pSection2 section pRight textStyles">
+    <div id="p2s2" class="pSection2 section pLeft textStyles">
       <div class="pTitle">
-        <h4>Definition</h4>
+        <h4>The Problem</h4>
       </div>
       <div class="pSection">
         <div class="pDesc">
-          <h2>Summary</h2>
-          <p>Research copy...</p>
+          <h2>Typical user path:</h2>
+          <ol>
+            <li>Home page > How Do I?</li>
+            <li>For Travelers > Cross US Borders</li>
+            <li>International Visitor Requirements</li>
+            <li>Admission into the US > CBP site</li>
+          </ol>
+          <h2>Feedback we received from guerilla testing:</h2>
+          <ul>
+            <li>Navigation menu was overwhelming</li>
+            <li>“Bread-crumbs” were helpful for navigation</li>
+            <li>Hard to tell that the user has navigated away from dhs.gov to cpb.gov because of similar visual style and menu</li>
+          </ul>
         </div>
         <div class="pImg">
-          <p><img src="img/proj2.png" class="nav"></p>
+          <p><img src="img/dhsimg/UserPath.png" class="maxW"></p>
+        </div>
+      </div>
+      <div class="pSection fitH">
+        <div class="" >
+          <h2>User Testing</h2>
+          <p>User testing was expanded to additional tasks. Key pain points were identified.</p>
+            <ul>
+              <li>Opened topic link in new tab preventing user from using “back” button on browser
+              <li>Information overload for navigation menu, hard to figure out where to find information
+              <li>Confusing to navigate menu and the “How Do I?” and “Get Involved” topics were too vague
+              <li>Overall very cluttered information and often topics overlapped or shown twice
+            </ul>
+          <p>These testing results were used to annotate usability and heuristic issues for the site.</p>
+        </div>
+      </div>
+      <div class="pCenter2">
+        <img src="img/dhsimg/UserTesting.png" class="cImg">
+        <p></p>
+      </div>
+      <blockquote class="quote dhs-quote-border">
+        <p>“This site is kind of a mess… it’s like a giant spider web…”</p>
+      </blockquote>
+      <div class="pSection">
+        <div class="pDesc">
+          <h2>Priority Matrix </h2>
+          <p>This tool helped me determine what to focus on.</p>
+          <ul>
+            <li>Hard to find menu items</li>
+            <li>Sub-topics not clear</li>
+            <li>Poor organization</li>
+            <li>Hard to keep track of where user is on page</li>
+        </div>
+        <div class="pImg">
+          <p><img src="img/dhsimg/PriorityMatrix.png" class="maxW"></p>
         </div>
       </div>
     </div>
     <div id="p2s3" class="pSection3 section pLeft textStyles">
       <div class="pTitle">
-        <h4>Ideation</h4>
+        <h4>The Solution</h4>
       </div>
       <div class="pSection">
         <div class="pDesc">
-          <h2>Summary</h2>
-          <p>Research copy...</p>
+          <h2>Mood Board</h2>
+          <p>This tool helped me determine what to focus on.</p>
+          <p>
+            Mood board focuses on creating more visual distinction in the navigation menu while maintaining the agency’s identity.
+          </p>
+          <p><a href="https://projects.invisionapp.com/boards/T943ZFXRADN/">Invision Link</a></p>
         </div>
         <div class="pImg">
-          <p><img src="img/proj2.png" class="nav"></p>
+          <p><img src="img/dhsimg/MoodBoard.png" class="maxW"></p>
         </div>
       </div>
+      <div class="pCenter2">
+        <h2 class="hLeft">Usability and Heuristic Analysis</h2>
+        <p>Testing results were used to annotate usability and heuristic issues for the site.</p>
+        <div class="imgRow">
+          <img src="img/dhsimg/Annotations1.png" class="rImg">
+          <img src="img/dhsimg/Annotations2.png" class="rImg">
+          <img src="img/dhsimg/AnnotationsMobile.png" class="rImg">
+        </div>
+        <p></p>
+      </div>
+      <div class="pCenter2" style="margin-top: 25px;">
+        <p>Many of the sub-sites within DHS.gov caused confusion among users because the navigation completely changes. These pages should be integrated into the main navigation.</p>
+        <div class="imgRow">
+          <img src="img/dhsimg/SubSite1.png" class="rImg">
+          <img src="img/dhsimg/SubSite2.png" class="rImg">
+          <img src="img/dhsimg/SubSite3.png" class="rImg">
+        </div>
+        <p></p>
+        <div class="imgRow">
+          <img src="img/dhsimg/SubSite4.png" class="rImg">
+          <img src="img/dhsimg/SubSite5.png" class="rImg">
+        </div>
+        <p></p>
+      </div>
+      <div class="pSection" style="margin-top: 25px;">
+        <div class="pDesc">
+          <h2>Card Sorting</h2>
+          <p>Based on user feedback that navigation menu categories were not easy to understand, card sorting was used to evaluate logical categories.</p>
+
+          <p><a href="https://www.figma.com/file/68vLSin7LWOzHz1Alxa6uw/DHS-CardSorting?node-id=1%3A13">Figma Link</a></p>
+        </div>
+        <div class="pImg">
+          <p><img src="img/dhsimg/CardSort.png" class="maxW"></p>
+        </div>
+      </div>
+      <div class="pSection" style="margin-top: 25px;">
+        <div class="pDesc">
+          <h2>Site Map</h2>
+          <p>Created a new sitemap based on the card sorting.</p>
+
+          <p><a href="https://www.figma.com/file/uPScGavKf9qV3sqGeX4vnN/DHS-Sitemap?node-id=4856%3A125">Figma Link</a></p>
+        </div>
+        <div class="pImg">
+          <p><img src="img/dhsimg/Sitemap.png" class="maxW" ></p>
+        </div>
+      </div>
+      
     </div>
-    <div id="p2s4" class="pSection4 section pRight textStyles">
+    <div id="p2s4" class="pSection4 section pLeft textStyles">
       <div class="pTitle">
-        <h4>Prototyping</h4>
+        <h4>Wireframing</h4>
       </div>
-      <div class="pSection">
-        <div class="pDesc">
-          <h2>Summary</h2>
-          <p>Research copy...</p>
+      <div class="pCenter2" style="">
+        <p>Wireframes created for the homepage using mobile first and atomic design thinking.</p>
+        <div class="imgRow">
+          <img src="img/dhsimg/WireframeMobile1.png" class="rImg">
+          <img src="img/dhsimg/WireframeMobile2.png" class="rImg">
+          <img src="img/dhsimg/WireframeMobile3.png" class="rImg">
         </div>
-        <div class="pImg">
-          <p><img src="img/proj2.png" class="nav"></p>
+        <p></p>
+        <div class="imgRow">
+          <img src="img/dhsimg/WireframeTablet1.png" class="rImgL">
+          <img src="img/dhsimg/WireframeTablet2.png" class="rImgL">
         </div>
+        <p></p>
+        <div class="imgRow">
+          <img src="img/dhsimg/WireframeWeb1.png" class="rImgL">
+          <img src="img/dhsimg/WireframeWeb2.png" class="rImgL">
+        </div>
+        <p></p>
       </div>
     </div>
     <div id="p2s5" class="pSection5 section pLeft textStyles">
       <div class="pTitle">
-        <h4>Testing</h4>
+        <h4>Prototyping</h4>
       </div>
-      <div class="pSection">
-        <div class="pDesc">
-          <h2>Summary</h2>
-          <p>Research copy...</p>
+      <div class="pCenter2">
+        <h2 class="hLeft">Style Guide</h2>
+        <p>I expanding the visual style to be used on the site and applied it to the wireframes to create prototypes.</p>
+        <div class="pCenter2">
+          <img src="img/dhsimg/StyleTile.png" class="">
+          <p></p>
         </div>
-        <div class="pImg">
-          <p><img src="img/proj2.png" class="nav"></p>
+        <p></p>
+      </div>
+      <div class="pCenter2" style="margin-top: 25px;">
+        <h2>Mobile Prototype</h2>
+        <a href="https://www.figma.com/file/YIvKMI9JKtIG7cNmK8htB9/DHS-Prototype?node-id=117%3A1424&t=Ms4yaV0i31utZVGG-1">Figma Link</a>
+        <p></p>
+        <div class="imgRow">
+          <img src="img/dhsimg/PrototypeMobile1.png" class="rImg">
+          <img src="img/dhsimg/PrototypeMobile2.png" class="rImg">
+          <img src="img/dhsimg/PrototypeMobile3.png" class="rImg">
         </div>
+        <p></p><p></p>
+        <h2>Web Prototype</h2>
+        <a href="https://www.figma.com/file/YIvKMI9JKtIG7cNmK8htB9/DHS-Prototype?node-id=226%3A3819&t=Ms4yaV0i31utZVGG-1">Figma Link</a>
+        <p></p>
+        <div class="imgRow">
+          <img src="img/dhsimg/StyleDemo1.png" class="rImgL">
+          <img src="img/dhsimg/StyleDemo2.png" class="rImgL">
+        </div>
+        <p></p>
+      </div>
       </div>
     </div>
-    <div id="p2s6" class="pSection6 section pCenter textStyles">
+    <div id="p2s6" class="pSection6 section pLeft textStyles">
       <div class="pTitle">
         <h4>Conclusion</h4>
       </div>
       <div class="pSection">
         <div class="pDesc">
-          <h2>Summary</h2>
-          <p>Research copy...</p>
+          <h2>What I Learned</h2>
+          <p>Organizing information using content chunking is not the easiest thing to do. Approaching the problem from the perspective of the typical user helps, but doesn't solve the problem.</p>
         </div>
         <div class="pImg">
-          <p><img src="img/proj2.png" class="nav"></p>
+          <p><img src="img/astronaut.png" class=""></p>
         </div>
       </div>
     </div>
