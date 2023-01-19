@@ -17,26 +17,30 @@ $(document).ready(function() {
     
     if(!$(this).hasClass('zoomed')){
       console.log('Clicked zImg');
-      //$(this).addClass('zoomed');
+      $(this).addClass('zoomed');
+      var bigImg = $(this).attr('src');
+      zoomImage(bigImg);
     }else{
       console.log('Clicked Off zImg');
-      //$(this).removeClass('zoomed');
+      $(this).removeClass('zoomed');
+      //zoomClose;
+    }
+    function zoomImage(bigImgSrc) {
+      // create a new div element
+      const newDiv = document.createElement("zDiv");
+      // and give it some content
+      $('.zDiv').attr("src", bigImgSrc);
+      // add the text node to the newly created div
+      $('body').append('.zDiv');
+      //newDiv.appendChild(newContent);
+      // add the newly created element and its content into the DOM
+      //const currentDiv = document.getElementById("div1");
+      //document.body.insertBefore(newDiv, currentDiv);
     }
   });
   
-  document.body.onload = addElement;
 
-  function addElement() {
-    // create a new div element
-    const newDiv = document.createElement("div");
-    // and give it some content
-    const newContent = document.createTextNode("Hi there and greetings!");
-    // add the text node to the newly created div
-    newDiv.appendChild(newContent);
-    // add the newly created element and its content into the DOM
-    const currentDiv = document.getElementById("div1");
-    document.body.insertBefore(newDiv, currentDiv);
-  }
+  
 
 // Animate nav and load project page on click
   var currentPage = 0;
