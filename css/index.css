@@ -1,3 +1,13 @@
+@font-face {
+  font-family: 'tt_backwards_sans_trialRg';
+  src: url('tt_backwards_sans_trial_regular-webfont.woff2') format('woff2'),
+       url('tt_backwards_sans_trial_regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+
 body {
 
 }
@@ -233,6 +243,8 @@ h4 {
   max-width: 500px;
   max-height: 350px;
   float: right;
+  top: 250px;
+  z-index: -2;
 }
 .pSection {
   display: flex;
@@ -246,7 +258,7 @@ h4 {
   padding-left: 25px;
   padding-right: 25px;
 }
-.pDesc {
+.pHalf {
   width: 50%;
   padding-left: 15px;
   padding-right: 15px;
@@ -284,6 +296,26 @@ h4 {
   height: 100%;
 }
 .pCenter {
+  flex-direction: column;
+}
+.pThumb {
+  width: 250px;
+  height: 150px;
+  border-radius: 125px;
+  border: 5px solid rgba(0,174,239,1);
+}
+.pThumbList {
+  list-style-type: none;
+  flex-direction: row;
+  display: flex;
+  gap: 25px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.pThumbRow {
+  width: 100%;
+}
+.pCenter {
   align-items: center;
 }
 .pSection1 {
@@ -303,6 +335,31 @@ h4 {
 }
 .pSection6 {
   grid-area: pSection6;
+}
+
+/** Lightbox **/
+
+.lightbox {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 1em;
+  background: rgba(0, 0, 0, 0.4);
+}
+.lightbox:target {
+  display: block;
+}
+.lightbox span {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
 /* Case Study 2 */

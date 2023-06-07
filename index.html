@@ -5,8 +5,6 @@
   <link href="css/orbit.css" rel="stylesheet">
   <meta name="viewport" content="width=device-width">
 
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;700&family=Playfair+Display:ital,wght@1,400;1,500&display=swap" rel="stylesheet">
@@ -42,7 +40,7 @@
     </div>
   </nav>
   <!--Start Home Page Content-->
-  <section id="p0Content" class="hide">
+  <section id="p0Content" class="">
     <div id="heroSection" class="textStyles">
       <img id="cloud1" class="anim" src="img/cloud-200x85.png">
       <img id="cloud2" class="anim" src="img/cloud-200x85.png">
@@ -77,7 +75,7 @@
     <div id="p0s6"></div>
     <div id="aboutMe" class="textStyles">
       <h2>About Me</h2>
-      <p>I’m a visual designer with a diverse skill set ranging from motion graphics to front end web development. I’m a strong believer that if something is worth doing, it’s worth doing right. At heart, I’m a maker. I love building things from the ground up, whether it’s a woodcut or a brand identity.</p>
+      <p>I'm a visual designer with a diverse skill set ranging from motion graphics to front end web development. I'm a strong believer that if something is worth doing, it's worth doing right. At heart, I'm a maker. I love building things from the ground up, whether it's a woodcut or a brand identity.</p>
     </div>
     <div id="skills" class="textStyles" >
       <h1>UX Skills</h1>
@@ -175,8 +173,8 @@
 
   <!-- Start Project 1 Page Content -->
   <section id="p1Content" class="pContent hide">
-    <div class="sidebar">
-      
+    
+    <div class="sidebar hide">
       <div class="scrollBar">
         <div class="scrollArrowUp"><img src="img/arrow-up.png"></div>
         <div class="scrollArrowDown"><img src="img/arrow-down.png"></div>
@@ -217,14 +215,14 @@
         </div>
         <div class="btn6">Conclusion</div>
       </div>
-    </div><!-- End Sidebar -->
+    </div> 
     <div id="p1s0" class="pSection0 pOverview section pCenter textStyles">
       <div class="pSection0 pTitle">
         <h4> </h4>
         <img src="img/p1-over.png" class="pTitleImg staticImg">
       </div>
       <div class="pSection">
-        <div class="pDesc">
+        <div class="pHalf">
           <h2>Travel App</h2>
           <p>Objective: Create an app to solve a problem a user might encounter when traveling with a group of people.</p>
         </div>
@@ -238,34 +236,37 @@
         <h4>Research</h4>
        
       </div>
-      <div class="pSection">
-        <div class="pDesc">
+      <div class="pSection pCenter">
+        <div class="">
           <h2>Summary</h2>
           <p>As a group of 5, we recorded interviews with general questions about traveling in a group.</p>
           <p>One key takeaway came in the form of a direct quote from one of my interviews.</p>
-          <blockquote>“It's just hard to boil something down like this that’s probably going to be solved by people having conversations into an app, and ultimately it's like how much time is that going to save you?”</blockquote>
+          <blockquote>“It's just hard to boil something down like this that's probably going to be solved by people having conversations into an app, and ultimately it's like how much time is that going to save you?”</blockquote>
+          <p>Research methods and exploration of concepts:</p>
         </div>
-        <div class="pSlider">
-           <!--Bootstrap Carousel-->
-          <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel"  style="max-width: 1100px !important;">
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                  <img src="img/ResearchSlides__Page_1.png" class="d-block w-100" alt="...">
-              </div>
-              <div class="carousel-item">
-                <img src="img/ResearchSlides__Page_2.png" class="d-block w-100" alt="...">
-              </div>
-              <div class="carousel-item">
-                <img src="img/ResearchSlides__Page_3.png" class="d-block w-100" alt="...">
-              </div>
-              <div class="carousel-item">
-                <img src="img/ResearchSlides__Page_4.png" class="d-block w-100" alt="...">
-              </div>
-              <div class="carousel-item">
-                <img src="img/ResearchSlides__Page_5.png" class="d-block w-100" alt="...">
-              </div>
-            </div>
-          </div>
+        <div class="pThumbRow">
+          <ul class="pThumbList">
+            <li>
+              <a href="#img1"><img src="img/ResearchSlides__Page_1.png" class="pThumb"></a>
+              <a href="#null" class="lightbox" id="img1"><span style="background-image: url('img/ResearchSlides__Page_1.png')"></span></a>
+            </li>
+            <li>
+              <a href="#img2"><img src="img/ResearchSlides__Page_2.png" class="pThumb"></a>
+              <a href="#null" class="lightbox" id="img2"><span style="background-image: url('img/ResearchSlides__Page_2.png')"></span></a>
+            </li>
+            <li>
+              <a href="#img3"><img src="img/ResearchSlides__Page_3.png" class="pThumb"></a>
+              <a href="#null" class="lightbox" id="img3"><span style="background-image: url('img/ResearchSlides__Page_3.png')"></span></a>
+            </li>
+            <li>
+              <a href="#img4"><img src="img/ResearchSlides__Page_4.png" class="pThumb"></a>
+              <a href="#null" class="lightbox" id="img4"><span style="background-image: url('img/ResearchSlides__Page_4.png')"></span></a>
+            </li>
+            <li>
+              <a href="#img5"><img src="img/ResearchSlides__Page_5.png" class="pThumb"></a>
+              <a href="#null" class="lightbox" id="img5"><span style="background-image: url('img/ResearchSlides__Page_5.png')"></span></a>
+            </li>
+          </ul>
         </div>
       </div>
     </div>
@@ -277,7 +278,7 @@
         <div class="pImg">
           <p><img src="img/map-with-you-are-here-vector-icons.jpg" class="staticImg imgLeft"></p>
         </div>
-        <div class="pDesc">
+        <div class="pHalf">
           <h2>A change of direction...</h2>
           <p>Moving into the rest of the process I broke off from my group with my own direction based on user feedback.</p>
           <p>Much of the process for planning group travel is easily done through traditional communication. Finding a specific part of the process that we can provide value for the user is our goal.</p>
@@ -291,32 +292,32 @@
         <h4>Ideation</h4>
       </div>
       <div class="pSection">
-        <div class="pDesc">
+        <div class="pHalf">
           <h2>Here we explore the user's journey</h2>
           <p>Our user, Vanessa is traveling to New York City from Los Angeles with some of her yoga students. She invites her students to join her trip planning collaboration on GroupUp. 
             Instead of communicating with multiple individuals, researching activities, and manually scheduling, she is able to save 
             time and stress by using our app.</p>
         </div>
-        <div class="pSlider">
-          <!--Bootstrap Carousel-->
-         <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel"  style="max-width: 1100px !important;">
-           <div class="carousel-inner">
-             <div class="carousel-item active">
-                 <img src="img/IdeationSlides__Page_1.png" class="d-block w-100" alt="...">
-             </div>
-             <div class="carousel-item">
-               <img src="img/IdeationSlides__Page_2.png" class="d-block w-100" alt="...">
-             </div>
-             <div class="carousel-item">
-               <img src="img/IdeationSlides__Page_3.png" class="d-block w-100" alt="...">
-             </div>
-             <div class="carousel-item">
-               <img src="img/IdeationSlides__Page_4.png" class="d-block w-100" alt="...">
-             </div>
-           </div>
-         </div>
-       </div>
-       
+        <div class="pThumbRow">
+          <ul class="pThumbList">
+            <li>
+              <a href="#p1i1"><img src="img/IdeationSlides__Page_1.png" class="pThumb"></a>
+              <a href="#null" class="lightbox" id="p1i1"><span style="background-image: url('img/IdeationSlides__Page_1.png')"></span></a>
+            </li>
+            <li>
+              <a href="#p1i2"><img src="img/IdeationSlides__Page_2.png" class="pThumb"></a>
+              <a href="#null" class="lightbox" id="p1i2"><span style="background-image: url('img/IdeationSlides__Page_2.png')"></span></a>
+            </li>
+            <li>
+              <a href="#p1i3"><img src="img/IdeationSlides__Page_3.png" class="pThumb"></a>
+              <a href="#null" class="lightbox" id="p1i3"><span style="background-image: url('img/IdeationSlides__Page_3.png')"></span></a>
+            </li>
+            <li>
+              <a href="#p1i4"><img src="img/IdeationSlides__Page_4.png" class="pThumb"></a>
+              <a href="#null" class="lightbox" id="p1i4"><span style="background-image: url('img/IdeationSlides__Page_4.png')"></span></a>
+            </li>
+          </ul>
+        </div>       
       </div>
     </div>
     <div id="p1s4" class="pSection4 section pRight textStyles">
@@ -324,24 +325,23 @@
         <h4>Prototyping</h4>
       </div>
       <div class="pSection">
-        <div class="pSlider">
-          <!--Bootstrap Carousel-->
-          <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel"  style="max-width: 1100px !important;">
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                  <img src="img/PrototypingSlides__Page_1.png" class="d-block w-100" alt="...">
-              </div>
-              <div class="carousel-item">
-                <img src="img/PrototypingSlides__Page_2.png" class="d-block w-100" alt="...">
-              </div>
-              <div class="carousel-item">
-                <img src="img/PrototypingSlides__Page_3.png" class="d-block w-100" alt="...">
-              </div>
-
-            </div>
-          </div>
-        </div>
-        <div class="pDesc">
+        <div class="pThumbRow">
+          <ul class="pThumbList">
+            <li>
+              <a href="#p1p1"><img src="img/PrototypingSlides__Page_1.png" class="pThumb"></a>
+              <a href="#null" class="lightbox" id="p1p1"><span style="background-image: url('img/PrototypingSlides__Page_1.png')"></span></a>
+            </li>
+            <li>
+              <a href="#p1p2"><img src="img/PrototypingSlides__Page_2.png" class="pThumb"></a>
+              <a href="#null" class="lightbox" id="p1p2"><span style="background-image: url('img/PrototypingSlides__Page_2.png')"></span></a>
+            </li>
+            <li>
+              <a href="#p1p3"><img src="img/PrototypingSlides__Page_3.png" class="pThumb"></a>
+              <a href="#null" class="lightbox" id="p1p3"><span style="background-image: url('img/PrototypingSlides__Page_3.png')"></span></a>
+            </li>
+          </ul>
+        </div>  
+        <div class="pHalf">
           <h2>Lo-Fi / Mid-Fi Prototypes created an tested</h2>
           <p>Moving into the rest of the process I broke off from my group with my own direction based on user feedback.</p>
           <p>Much of the process for planning group travel is easily done through traditional communication. Finding a specific part of the process that we can provide value for the user is our goal.</p>
@@ -356,7 +356,7 @@
         <h4>Testing</h4>
       </div>
       <div class="pSection">
-        <div class="pDesc">
+        <div class="pHalf">
           <h2>Key insights</h2>
           <p>
             <ul>
@@ -376,7 +376,7 @@
         <h4>Conclusion</h4>
       </div>
       <div class="pSection">
-        <div class="pDesc">
+        <div class="pHalf">
           <h2>Summary</h2>
           <p>Integrating user feedback during the research stage of the process allowed GroupUp to focus on what the user needed. This was possible because it helped identify which parts of the process were easily done through outside coordination and which parts the app could help with.</p>
         </div>
@@ -391,10 +391,9 @@
   </section><!-- End Project 1 Content -->
 
   <!-- Start Project 2 Content -->
-  <section id="p2Content" class="pContent">
+  <section id="p2Content" class="pContent hide">
     <div id="div1"></div>
-    <div class="sidebar">
-      
+    <div class="sidebar hide">
       <div class="scrollBar">
         <div class="scrollArrowUp"><img src="img/arrow-up.png"></div>
         <div class="scrollArrowDown"><img src="img/arrow-down.png"></div>
@@ -438,7 +437,7 @@
     </div><!-- End Sidebar -->
     <div id="p2s0" class="pOverview section pCenter textStyles">
       <div class="pSection">
-        <div class="pDesc">
+        <div class="pHalf">
           <h2>Case Study: DHS.gov - Government Agency Web and Mobile Redesign</h2>
           <p>This individual student project was completed over the course of 4 weeks. The goal was to analyze and redesign a government agency website for improved usability and responsiveness. Improving and standardizing the visual design of the site to better fit the users perception of the agency was a key part of the process.</p>
           <h2>My Role</h2>
@@ -463,7 +462,7 @@
         <h4>The Beginning</h4>
       </div>
       <div class="pSection">
-        <div class="pDesc">
+        <div class="pHalf">
           <h2>Initial User Research:</h2>
           <p>I used traffic analysis of the website to establish the most common types of users and tasks. To help inform our usability research we created a proto-persona.
 
@@ -492,7 +491,7 @@
         <h4>The Problem</h4>
       </div>
       <div class="pSection">
-        <div class="pDesc">
+        <div class="pHalf">
           <h2>Typical user path:</h2>
           <ol>
             <li>Home page > How Do I?</li>
@@ -507,8 +506,25 @@
             <li>Hard to tell that the user has navigated away from dhs.gov to cpb.gov because of similar visual style and menu</li>
           </ul>
         </div>
-        <div class="pImg">
-          <p><img src="img/dhsimg/UserPath.png" class="maxW"></p>
+        <div class="pThumbRow">
+          <ul class="pThumbList">
+            <li>
+              <a href="#p2p1"><img src="img/dhsimg/Wireflow01.png" class="pThumb"></a>
+              <a href="#null" class="lightbox" id="p2p1"><span style="background-image: url('img/dhsimg/Wireflow01.png')"></span></a>
+            </li>
+            <li>
+              <a href="#p2p2"><img src="img/dhsimg/Wireflow02.png" class="pThumb"></a>
+              <a href="#null" class="lightbox" id="p2p2"><span style="background-image: url('img/dhsimg/Wireflow02.png')"></span></a>
+            </li>
+            <li>
+              <a href="#p2p3"><img src="img/dhsimg/Wireflow03.png" class="pThumb"></a>
+              <a href="#null" class="lightbox" id="p2p3"><span style="background-image: url('img/dhsimg/Wireflow03.png')"></span></a>
+            </li>
+            <li>
+              <a href="#p2p4"><img src="img/dhsimg/Wireflow04.png" class="pThumb"></a>
+              <a href="#null" class="lightbox" id="p2p4"><span style="background-image: url('img/dhsimg/Wireflow04.png')"></span></a>
+            </li>
+          </ul>
         </div>
       </div>
       <div class="pSection fitH">
@@ -529,10 +545,10 @@
         <p></p>
       </div>
       <blockquote class="quote dhs-quote-border">
-        <p>“This site is kind of a mess… it’s like a giant spider web…”</p>
+        <p>“This site is kind of a mess… it's like a giant spider web…”</p>
       </blockquote>
       <div class="pSection">
-        <div class="pDesc">
+        <div class="pHalf">
           <h2>Priority Matrix </h2>
           <p>This tool helped me determine what to focus on.</p>
           <ul>
@@ -541,8 +557,10 @@
             <li>Poor organization</li>
             <li>Hard to keep track of where user is on page</li>
         </div>
+
         <div class="pImg">
-          <p><img src="img/dhsimg/PriorityMatrix.png" class="maxW"></p>
+          <a href="#p2p5"><img src="img/dhsimg/PriorityMatrix.png" class="pThumb"></a>
+              <a href="#null" class="lightbox" id="p2p5"><span style="background-image: url('img/dhsimg/PriorityMatrix.png')"></span></a>
         </div>
       </div>
     </div>
@@ -551,44 +569,70 @@
         <h4>The Solution</h4>
       </div>
       <div class="pSection">
-        <div class="pDesc">
+        <div class="pHalf">
           <h2>Mood Board</h2>
           <p>This tool helped me determine what to focus on.</p>
           <p>
-            Mood board focuses on creating more visual distinction in the navigation menu while maintaining the agency’s identity.
+            Mood board focuses on creating more visual distinction in the navigation menu while maintaining the agency's identity.
           </p>
           <p><a href="https://projects.invisionapp.com/boards/T943ZFXRADN/">Invision Link</a></p>
         </div>
         <div class="pImg">
-          <p><img src="img/dhsimg/MoodBoard.png" class="maxW"></p>
+          <a href="#p2p6"><img src="img/dhsimg/MoodBoard.png" class="pThumb"></a>
+              <a href="#null" class="lightbox" id="p2p6"><span style="background-image: url('img/dhsimg/MoodBoard.png')"></span></a>
         </div>
       </div>
       <div class="pCenter2">
         <h2 class="hLeft">Usability and Heuristic Analysis</h2>
         <p>Testing results were used to annotate usability and heuristic issues for the site.</p>
-        <div class="imgRow">
-          <img src="img/dhsimg/Annotations1.png" class="rImg">
-          <img src="img/dhsimg/Annotations2.png" class="rImg">
-          <img src="img/dhsimg/AnnotationsMobile.png" class="rImg">
+        <div class="pThumbRow">
+          <ul class="pThumbList">
+            <li>
+              <a href="#p2u1"><img src="img/dhsimg/Annotations1.png" class="pThumb"></a>
+              <a href="#null" class="lightbox" id="p2u1"><span style="background-image: url('img/dhsimg/Annotations1.png')"></span></a>
+            </li>
+            <li>
+              <a href="#p2u2"><img src="img/dhsimg/Annotations2.png" class="pThumb"></a>
+              <a href="#null" class="lightbox" id="p2u2"><span style="background-image: url('img/dhsimg/Annotations2.png')"></span></a>
+            </li>
+            <li>
+              <a href="#p2u3"><img src="img/dhsimg/AnnotationsMobile.png" class="pThumb"></a>
+              <a href="#null" class="lightbox" id="p2u3"><span style="background-image: url('img/dhsimg/AnnotationsMobile.png')"></span></a>
+            </li>
+          </ul>
         </div>
         <p></p>
       </div>
       <div class="pCenter2" style="margin-top: 25px;">
         <p>Many of the sub-sites within DHS.gov caused confusion among users because the navigation completely changes. These pages should be integrated into the main navigation.</p>
-        <div class="imgRow">
-          <img src="img/dhsimg/SubSite1.png" class="rImg">
-          <img src="img/dhsimg/SubSite2.png" class="rImg">
-          <img src="img/dhsimg/SubSite3.png" class="rImg">
-        </div>
-        <p></p>
-        <div class="imgRow">
-          <img src="img/dhsimg/SubSite4.png" class="rImg">
-          <img src="img/dhsimg/SubSite5.png" class="rImg">
+        <div class="pThumbRow">
+          <ul class="pThumbList">
+            <li>
+              <a href="#p2u4"><img src="img/dhsimg/SubSite1.png" class="pThumb"></a>
+              <a href="#null" class="lightbox" id="p2u4"><span style="background-image: url('img/dhsimg/SubSite1.png')"></span></a>
+            </li>
+            <li>
+              <a href="#p2u5"><img src="img/dhsimg/SubSite2.png" class="pThumb"></a>
+              <a href="#null" class="lightbox" id="p2u5"><span style="background-image: url('img/dhsimg/SubSite2.png')"></span></a>
+            </li>
+            <li>
+              <a href="#p2u6"><img src="img/dhsimg/SubSite3.png" class="pThumb"></a>
+              <a href="#null" class="lightbox" id="p2u6"><span style="background-image: url('img/dhsimg/SubSite3.png')"></span></a>
+            </li>
+            <li>
+              <a href="#p2u7"><img src="img/dhsimg/SubSite4.png" class="pThumb"></a>
+              <a href="#null" class="lightbox" id="p2u7"><span style="background-image: url('img/dhsimg/SubSite4.png')"></span></a>
+            </li>
+            <li>
+              <a href="#p2u8"><img src="img/dhsimg/SubSite5.png" class="pThumb"></a>
+              <a href="#null" class="lightbox" id="p2u8"><span style="background-image: url('img/dhsimg/SubSite5.png')"></span></a>
+            </li>
+          </ul>
         </div>
         <p></p>
       </div>
       <div class="pSection" style="margin-top: 25px;">
-        <div class="pDesc">
+        <div class="pHalf">
           <h2>Card Sorting</h2>
           <p>Based on user feedback that navigation menu categories were not easy to understand, card sorting was used to evaluate logical categories.</p>
 
@@ -599,7 +643,7 @@
         </div>
       </div>
       <div class="pSection" style="margin-top: 25px;">
-        <div class="pDesc">
+        <div class="pHalf">
           <h2>Site Map</h2>
           <p>Created a new sitemap based on the card sorting.</p>
 
@@ -674,7 +718,7 @@
         <h4>Conclusion</h4>
       </div>
       <div class="pSection">
-        <div class="pDesc">
+        <div class="pHalf">
           <h2>What I Learned</h2>
           <p>Organizing information using content chunking is not the easiest thing to do. Approaching the problem from the perspective of the typical user helps, but doesn't solve the problem.</p>
         </div>
@@ -687,8 +731,7 @@
 
   <!-- Start Project 3 Content -->
   <section id="p3Content" class="pContent hide">
-    <div class="sidebar">
-      
+    <div class="sidebar hide">
       <div class="scrollBar">
         <div class="scrollArrowUp"><img src="img/arrow-up.png"></div>
         <div class="scrollArrowDown"><img src="img/arrow-down.png"></div>
@@ -736,7 +779,7 @@
         <h4>RescueCats</h4>
       </div>
       <div class="pSection">
-        <div class="pDesc">
+        <div class="pHalf">
           <h2>Summary</h2>
           <p>Here's an overview of the project.</p>
         </div>
@@ -750,7 +793,7 @@
         <h4>Research</h4>
       </div>
       <div class="pSection">
-        <div class="pDesc">
+        <div class="pHalf">
           <h2>Summary</h2>
           <p>Research copy...</p>
         </div>
@@ -764,7 +807,7 @@
         <h4>Definition</h4>
       </div>
       <div class="pSection">
-        <div class="pDesc">
+        <div class="pHalf">
           <h2>Summary</h2>
           <p>Research copy...</p>
         </div>
@@ -778,7 +821,7 @@
         <h4>Ideation</h4>
       </div>
       <div class="pSection">
-        <div class="pDesc">
+        <div class="pHalf">
           <h2>Summary</h2>
           <p>Research copy...</p>
         </div>
@@ -792,7 +835,7 @@
         <h4>Prototyping</h4>
       </div>
       <div class="pSection">
-        <div class="pDesc">
+        <div class="pHalf">
           <h2>Summary</h2>
           <p>Research copy...</p>
         </div>
@@ -806,7 +849,7 @@
         <h4>Testing</h4>
       </div>
       <div class="pSection">
-        <div class="pDesc">
+        <div class="pHalf">
           <h2>Summary</h2>
           <p>Research copy...</p>
         </div>
@@ -820,7 +863,7 @@
         <h4>Conclusion</h4>
       </div>
       <div class="pSection">
-        <div class="pDesc">
+        <div class="pHalf">
           <h2>Summary</h2>
           <p>Research copy...</p>
         </div>
