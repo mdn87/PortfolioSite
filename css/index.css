@@ -102,10 +102,20 @@ body {
   height: 50px;
   cursor: pointer;
 }
+/*
+.navBorder {
+  border-image-source: url("/img/rivet-border-open-slice.svg");
+  border-image-slice: 25 25;
+  border-image-width: 5px;
+  border-image-outset: 5px; 
+  border-image-repeat: round;
+}
+*/
 .highlight {
   background-color: rgba(0,174,239,0.5);
   border-radius: 50%;
 }
+
 .click {
   animation-name: navClick;
   animation-duration: 0.65s;
@@ -196,6 +206,20 @@ h4 {
   font-weight: 700 !important;
   color: rgba(0,174,239,1) !important;
   text-transform: uppercase !important;
+  display: block;
+  margin-block-end: 14px;
+}
+h6 {
+  font-family: 'Montserrat', sans-serif !important; 
+  font-size: 24pt !important;
+  line-height: 20px !important;
+  margin-top: 3px !important;
+  padding-left: 6px;
+  font-weight: 700 !important;
+  color: rgba(0,174,239,1) !important;
+  text-transform: uppercase !important;
+  display: block;
+
 }
 .pContent {
   width: 100%;
