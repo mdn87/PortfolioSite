@@ -32,6 +32,7 @@ body {
 #heroImg {
   position: absolute;
   z-index: 4;
+  left: 0;
 }
 #cloud1 {
   top: 235px;
@@ -61,6 +62,7 @@ body {
 }
 
 /* Navigation */
+/* Keep desktop navbar styling */
 #navBar {
   display: flex;
   flex-direction: row;
@@ -68,15 +70,63 @@ body {
   align-items: center;
   width: 100%;
   height: 200px;
-  margin: 0px;
   padding-left: 5%;
   border-bottom: 10px solid rgba(0,174,239,1);
-  border-color: rgba(0,174,239,1);
-  position: sticky;
-  top: 0px;
   background-color: white;
+  position: sticky;
+  top: 0;
   z-index: 111;
 }
+
+/* Medium nav images for tablet */
+@media (max-width: 1200px) {
+  #navBar {
+    height: auto;
+    flex-wrap: wrap;
+    padding-left: 2%;
+    padding-bottom: 1%;
+    border-bottom: 4px solid rgba(0,174,239,1);
+  }
+  #navigation img {
+    width: 100px !important;
+    height: 100px !important;
+  }
+  .icons img {
+    width: 40px !important;
+    height: 40px !important;
+  }
+}
+
+/* Small nav images for mobile */
+@media (max-width: 900px) {
+  #navigation {
+    gap: 5px;
+  }
+  #navigation img {
+    width: 75px !important;
+    height: 75px !important;
+  }
+  .icons img {
+    width: 30px !important;
+    height: 30px !important;
+  }
+
+  .icons {
+    width: 100%;
+    padding-right: 3%;
+  }
+}
+
+/* Extra line for portait mobile */
+@media (max-width: 600px) {
+  .icons {
+    width: 100%;
+    padding-right: 3%;
+  }
+}
+
+
+
 #navigation {
   display: flex;
   align-items: center;
@@ -136,52 +186,49 @@ body {
 
 /* mainContent flexbox */
 #p0Content {
-  margin: 0px 1%;
-  padding-left: 200px;
-  padding-right: 200px;
-  display: grid;
-  grid-template-rows: 520px 150px 200px 200px;
-  grid-template-columns: 2fr 2fr 1fr;
-  grid-template-areas:
-  "heroSection heroSection heroSection"
-  "aboutMe aboutMe aboutMe"
-  "skills work work"
-  "skills work work"
-  ;
+  display: flex;
+  flex-direction: column; /* Stack sections vertically */
+  align-items: center; /* Center content horizontally */
+  justify-content: flex-start; /* Align content from top */
+  padding: 0 200px;
+  max-width: 1200px;
+  width: 100%;
+  gap: 40px; /* Adds space between sections */
+  margin: 0 auto;
 }
+
+
 #heroSection {
   grid-area: heroSection;
+  min-height: 500px;
   /*  background-image: url("/img/heroimg.png");
   object-fit: fill;
   background-repeat: no-repeat; */
 }
 #aboutMe {
   grid-area: aboutMe;
-  padding-right: 25px;
+  text-align: center;
 }
-#skills {
-  grid-area: skills;
-  padding-right: 25px;
-  height: 800px;
+/* Wrap Skills and Work in a Flexbox container */
+.skills-work-container {
+  display: flex;
+  flex-wrap: wrap; /* Allows wrapping if needed */
+  justify-content: space-between;
+  gap: 40px;
+  width: 100%;
 }
-#work {
-  grid-area: work;
-  padding-right: 25px;
-}
-#exp {
-  grid-area: exp;
-  padding-right: 25px;
+
+#skills, #work {
+  flex: 1;
+  min-width: 45%; /* Prevents squeezing */
 }
 .project {
-  display: grid;
+  display: flex;
   flex-direction: column;
-  grid-template-rows: 100px 200px;
-  grid-template-columns: 2fr 1fr;
-  grid-template-areas:
-  "projTitle projImg"
-  "projDesc projImg"
-  ;
+  gap: 15px;
+  width: 100%;
 }
+
 .projDesc {
   grid-area: projDesc;
 }
@@ -193,6 +240,12 @@ body {
   width: 150px;
   height: 150px;
   justify-self: flex-end;
+}
+/* Project images */
+.projImg img {
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
 }
 
 /* Project Page Content */
@@ -459,7 +512,7 @@ h6 {
   z-index: -1;
   height: 160px;
   left: 10px;
-  bottom: 10px;
+  bottom: 13px;
 }
 .zoomed {
 
@@ -651,18 +704,6 @@ h6 {
 
 /* Media Queries */
 @media only screen and (max-width: 1200px) {
-  #mainContent {
-    margin: 0px 1%;
-    display: grid;
-    grid-template-rows: 520px 150px 200px 200px;
-    grid-template-columns: 2fr 2fr 1fr;
-    grid-template-areas:
-    "heroSection heroSection heroSection"
-    "aboutMe aboutMe aboutMe"
-    "skills work work"
-    "skills work work"
-    ;
-  }
   #heroSection {
     overflow: hidden;
     height: 500px;
@@ -677,6 +718,9 @@ h6 {
   .desk {
     display: none;
   }
+  #p0Content {
+    width: 70%;
+  }
 }
 @media only screen and (max-width: 900px) {
   .anim {
@@ -685,38 +729,36 @@ h6 {
   .desk {
     display: none;
   }
-  #navigation img {
-    width: 120px;
-    height: 120px;
+  #p0Content {
+    grid-template-rows: auto;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "heroSection"
+      "aboutMe"
+      "skills"
+      "work";
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 60%;
+  }
+  #heroSection {
+    min-height: auto;
+  }
+  .skills-work-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  #skills, #work {
+    max-width: 100%;
   }
 }
+
 @media only screen and (max-width: 600px) {
   .anim {
     display: none;
   }
   .desk {
     display: none;
-  }
-  #navBar {
-    height: 100px;
-    padding-left: 5%;
-    border-bottom: 4px solid rgba(0,174,239,1);
-    justify-content: space-between;
-  }
-  #navigation {
-    gap: 5%;
-  }
-  #navigation img {
-    width: 70px;
-    height: 70px;
-  }
-  .icons {
-    padding-right: 3%;
-  }
-  .icons img {
-    width: 35px;
-    height: 35px;
-    margin: 0px;
   }
   #mainContent {
     margin: 0px 1%;
@@ -737,15 +779,7 @@ h6 {
   .sidebar {
     display: none;
   }
-  .project {
-    grid-template-rows: 100px 200px;
-    grid-template-columns: 2fr 1fr;
-    grid-template-areas:
-    "projTitle projImg"
-    "projDesc projImg"
-    ;
-  }
-}*/
+}
 
 /* Ensure the section fills the available space */
 #motionContent {
@@ -781,3 +815,21 @@ h6 {
   height: auto;
   aspect-ratio: 16 / 9; /* Keeps video proportions */
 }
+
+a {
+  font-family: 'Montserrat', sans-serif !important; 
+  font-size: 34pt !important;
+  line-height: 40px !important;
+  margin-top: 3px !important;
+  font-weight: 700 !important;
+  color: rgba(0,174,239,1) !important;
+  text-transform: uppercase !important;
+  display: block;
+  margin-block-end: 14px;
+}
+
+
+/* 2025 hackjob */
+
+
+

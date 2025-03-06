@@ -1,5 +1,4 @@
 
-
 // Hover projects in navigation
 $(document).ready(function() {
   $('.nav').hover(function(){
@@ -159,7 +158,7 @@ $(document).ready(function() {
           $('#proj3').removeClass('active');
         }
         if(currentPage == 4){
-          $('#p4Content').addClass('hide');
+          $('#motionContent').addClass('hide');
           $('#motion').removeClass('highlight');
           $('#motion').removeClass('click');
           $('#motion').removeClass('active');
