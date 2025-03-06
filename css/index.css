@@ -746,3 +746,38 @@ h6 {
     ;
   }
 }*/
+
+/* Ensure the section fills the available space */
+#motionContent {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+/* Ensure the vSection takes up full width */
+.vSection {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+/* Make the video container full width */
+.video-container {
+  display: flex;
+  flex-direction: column;
+  width: 80%; /* Adjust if needed */
+  max-width: 1200px; /* Prevents videos from getting too large on big screens */
+}
+
+/* Make sure videos are full width */
+.vid {
+  width: 100%;
+  margin-bottom: 20px; /* Optional spacing between videos */
+}
+
+/* Ensure iframes fill width and maintain aspect ratio */
+.vid iframe {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9; /* Keeps video proportions */
+}

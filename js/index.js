@@ -66,6 +66,10 @@ $(document).ready(function() {
         $('#proj3').addClass('active');
         loadPage(3);
       }
+      if($(this).is('#motion')){
+        $('#motion').addClass('active');
+        loadPage(4);
+      }
     }
     //project buttons on home page
     if($('#home').hasClass('active')){
@@ -88,6 +92,13 @@ $(document).ready(function() {
         $('#proj3').addClass('active');
         $('#proj3').addClass('click');
         $('#proj3').addClass('highlight');
+        loadPage(3);
+      }
+      if($(this).is('#motion_link')){
+        $('#home').removeClass('active');
+        $('#motion').addClass('active');
+        $('#motion').addClass('click');
+        $('#motion').addClass('highlight');
         loadPage(3);
       }
     }
@@ -114,6 +125,11 @@ $(document).ready(function() {
         currentPage = 3;
         waypointPage(currentPage);
         $('#p3Content').removeClass('hide');
+      } else if(pageNumber == 4){
+        clearPage();
+        currentPage = 4;
+        waypointPage(currentPage);
+        $('#motionContent').removeClass('hide');
       }
       function clearPage(){
         $(window).scrollTop(0);
@@ -141,6 +157,12 @@ $(document).ready(function() {
           $('#proj3').removeClass('highlight');
           $('#proj3').removeClass('click');
           $('#proj3').removeClass('active');
+        }
+        if(currentPage == 4){
+          $('#p4Content').addClass('hide');
+          $('#motion').removeClass('highlight');
+          $('#motion').removeClass('click');
+          $('#motion').removeClass('active');
         }
       }
     }
