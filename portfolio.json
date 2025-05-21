@@ -1,0 +1,148 @@
+{
+    "homepage": {
+      "hero": {
+        "images": [
+          "img/cloud-200x85.png",
+          "img/cloud-200x85.png",
+          "img/heroImg-blank.png",
+          "img/star2-25x25.png",
+          "img/planet2-200x175.png",
+          "img/planet1-375x250-alt.png"
+        ]
+      },
+      "id": "home",
+      "thumbnail": "img/logo.png",
+      "about": {
+        "title": "About Me",
+        "text": "I might not actually be an astronaut... but I am a digital designer with a diverse skill set ranging from motion graphics to front-end web development. I'm a strong believer that if something is worth doing, it's worth doing right. At heart, I'm a maker. I love building things from the ground up, whether it's a woodcut or a brand identity."
+      },
+      "skills": {
+        "title": "UX Skills",
+        "tools": "Figma, Adobe XD, Photoshop, Illustrator, InDesign, AfterEffects, Premiere, ProTools, Fiery Impose, HTML/CSS, JavaScript",
+        "soft_skills": "Workflow optimization, customer service, logistics, communication, management, computer networking",
+        "design_skills": "Visual design, user experience, wireframing, rapid prototyping, storyboarding, user research, interviewing, responsive web, interaction, motion, sound",
+        "education": [
+          {
+            "degree": "UI/UX Certification • 2022",
+            "institution": "Georgia Institute of Technology",
+            "description": "Six-month training certificate in an online classroom setting."
+          },
+          {
+            "degree": "BFA • Motion Graphics • 2008",
+            "institution": "Savannah College of Art and Design",
+            "description": "Developed branding solutions and production artwork for broadcast networks. Utilized Adobe Creative Suite, including Adobe After Effects and 3D Software. Gained experience with sound design and web development."
+          }
+        ]
+      },
+      "projects": [
+        {
+          "id": "travel-app",
+          "title": "Travel App",
+          "category": "Individual Project",
+          "description": "In this student project, I went through the process of identifying a user need through to a high-resolution prototype, while incorporating user feedback throughout the process.",
+          "thumbnail": "img/proj1.png"
+        },
+        {
+          "id": "government-redesign",
+          "title": "Government Agency Redesign",
+          "category": "Individual Project",
+          "description": "I analyzed the data structure of the Homeland Security website and integrated user feedback into its redesign. A new brand style guide was created and web and mobile prototypes were built with responsive web design in mind.",
+          "thumbnail": "img/proj2.png"
+        },
+        {
+          "id": "nonprofit-redesign",
+          "title": "Non-Profit Website Redesign",
+          "category": "Group Project",
+          "description": "I worked with a team to redesign an existing non-profit website while implementing mobile-first principles and a user-centered approach.",
+          "thumbnail": "img/proj3.png"
+        }
+      ]
+    },
+    "projects": [
+      {
+        "id": "travel-app",
+        "title": "Travel App",
+        "overview": "Objective: Create an app to solve a problem a user might encounter when traveling with a group.",
+        "image": "img/p1-over2.png",
+        "sections": [
+          {
+            "title": "Research",
+            "text": "As a group of 5, we recorded interviews with general questions about traveling in a group.",
+            "image": "img/ResearchSlides__Page_1.png"
+          },
+          {
+            "title": "Definition",
+            "text": "Moving into the rest of the process, I broke off from my group with my own direction based on user feedback.",
+            "image": "img/map-with-you-are-here-vector-icons.jpg"
+          },
+          {
+            "title": "Prototyping",
+            "text": "Lo-Fi / Mid-Fi Prototypes created and tested based on user feedback.",
+            "image": "img/PrototypingSlides__Page_1.png"
+          },
+          {
+            "title": "Conclusion",
+            "text": "Integrating user feedback during the research stage helped identify which parts of the process the app could actually improve.",
+            "image": "img/astronaut.png"
+          }
+        ]
+      },
+      {
+        "id": "government-redesign",
+        "title": "Government Agency Redesign",
+        "overview": "This individual student project was completed over the course of 4 weeks. The goal was to analyze and redesign a government agency website for improved usability and responsiveness.",
+        "image": "img/dhsimg/dhsLogo.png",
+        "sections": [
+          {
+            "title": "User Research",
+            "text": "I used traffic analysis of the website to establish the most common types of users and tasks. A proto-persona was created to better understand user needs.",
+            "image": "img/dhsimg/ProtoPersona.png"
+          },
+          {
+            "title": "Testing",
+            "text": "Key pain points were identified, including difficulty in navigation and overwhelming menu structures.",
+            "image": "img/dhsimg/UserTesting.png"
+          },
+          {
+            "title": "Wireframing",
+            "text": "Wireframes were created for the homepage using mobile-first and atomic design principles.",
+            "image": "img/dhsimg/WireframeMobile1.png"
+          },
+          {
+            "title": "Conclusion",
+            "text": "Restructuring the site navigation and focusing on a clean design drastically improved usability.",
+            "image": "img/astronaut.png"
+          }
+        ]
+      },
+      {
+        "id": "nonprofit-redesign",
+        "title": "Non-Profit Website Redesign",
+        "overview": "A team of five was tasked with redesigning an existing non-profit website, focusing on mobile-first principles and user-centered design.",
+        "image": "img/RescueCatsLogo.png",
+        "sections": [
+          {
+            "title": "Research",
+            "text": "Users found it difficult to navigate due to jumbled information and outdated navigation features.",
+            "image": "img/RescueCats/RescueCats-UserPersona.png"
+          },
+          {
+            "title": "Definition",
+            "text": "We defined the problem statement and aimed to make the adoption process more intuitive and clear.",
+            "image": "img/RescueCats/RescueCats-StyleGuide.png"
+          },
+          {
+            "title": "Prototyping",
+            "text": "Interactive prototypes allowed us to evaluate the user experience more effectively.",
+            "image": "img/RescueCats/lofi-prototype.gif"
+          },
+          {
+            "title": "Conclusion",
+            "text": "By streamlining the adoption process and prioritizing user needs, the redesign has the potential to increase engagement and donations.",
+            "image": "img/astronaut.png"
+          }
+        ]
+      }
+    ]
+  }
+  

@@ -14,30 +14,11 @@ $(document).ready(function() {
 // Zoom case study images
   $('.zImg').on('click', function(){
     
-    if(!$(this).hasClass('zoomed')){
-      console.log('Clicked zImg');
-      $(this).addClass('zoomed');
-      var bigImg = $(this).attr('src');
-      zoomImage(bigImg);
-    }else{
-      console.log('Clicked Off zImg');
-      $(this).removeClass('zoomed');
-      //zoomClose;
-    }
-    function zoomImage(bigImgSrc) {
-      // create a new div element
-      const newDiv = document.createElement("zDiv");
-      // and give it some content
-      $('.zDiv').attr("src", bigImgSrc);
-      // add the text node to the newly created div
-      $('body').append('.zDiv');
-      //newDiv.appendChild(newContent);
-      // add the newly created element and its content into the DOM
-      //const currentDiv = document.getElementById("div1");
-      //document.body.insertBefore(newDiv, currentDiv);
-    }
-  });
-  
+    // Load About Section
+    document.getElementById("aboutMe").innerHTML = `
+      <h2>${homepage.about.title}</h2>
+      <p>${homepage.about.text}</p>
+    `;
 
   
 
@@ -195,235 +176,211 @@ $(document).ready(function() {
       containment: '#dotContain1',
     });
   });
-  $("#mainDot1").on("drag", function(event, ui) {
-    var thisChanges = (ui.position.top * 9);
-    $(window).scrollTop(thisChanges)
-    //console.log(ui);
-  } );
 
-  $(function() { 
-    $('#mainDot2').draggable({
-      containment: '#dotContain2',
-    });
-  });
-  $("#mainDot2").on("drag", function(event, ui) {
-    var thisChanges = (ui.position.top * 9);
-    $(window).scrollTop(thisChanges)
-    //console.log(ui);
-  } );
-
-  $(function() { 
-    $('#mainDot3').draggable({
-      containment: '#dotContain3',
-    });
-  });
-  $("#mainDot3").on("drag", function(event, ui) {
-    var thisChanges = (ui.position.top * 9);
-    $(window).scrollTop(thisChanges)
-    //console.log(ui);
-  } );
-});
-
-// Sidebar collapse on scroll
-// Waypoint Library jQuery
-// http://imakewebthings.com/waypoints/guides/jquery-zepto/
-
-function waypointPage(pageNumber) {
-  console.log('Waypoint page #: ' + pageNumber);
-  var thisSection = $('#p' + pageNumber + 'Content');
+  // --- Loader --- //
+  $(document).ready(function () {
+    let currentPage = "home";
+    function showLoader() {
+      $('.loader').fadeIn(200);
+    }
+    function hideLoader() {
+      $('.loader').fadeOut(200);
+    }
   
-  $(document).ready(function() {
-    var waypoint0 = new Waypoint({
-      element: $('#p' + pageNumber + 's0'),
-      handler: function() {
-        // Do nothing
-        console.log('No Waypoints Yet');
-        $('.dots1').removeClass('hide');
-        $('.dots2').removeClass('hide');
-        $('.dots3').removeClass('hide');
-        $('.dots4').removeClass('hide');
-        $('.dots5').removeClass('hide');
-        $('.dots6').removeClass('hide');
-
+    // 🏠 Load the homepage initially
+    loadHomePage();
+  
+    // 🔄 Navigation Click Handler
+    $('.nav').on('click', function (event) {
+      event.preventDefault();
+      let pageId = $(this).attr('id');
+  
+      if (pageId === "home") {
+        loadHomePage();
+        history.pushState({ page: "home" }, "", "?page=home");
+      } else {
+        loadProjectPage(pageId);
+        history.pushState({ page: pageId }, "", `?page=${pageId}`);
       }
-    })
-    var waypoint1 = new Waypoint({
-      element: $('#p' + pageNumber + 's1'),
-      handler: function() {
-        console.log('Waypoint 1');
-        if($('.dots1').hasClass('hide')){
-          $('.dots1').removeClass('hide');
+    });
+  
+    // 🔙 Handle browser back/forward navigation
+    window.onpopstate = function (event) {
+      if (event.state) {
+        if (event.state.page === "home") {
+          loadHomePage();
         } else {
-          $('.dots1').addClass('hide');
+          loadProjectPage(event.state.page);
         }
-        if($('.btn1').hasClass('navFocus')){
-          $('.btn1').removeClass('navFocus');
-        } else {
-          $('.btn1').addClass('navFocus');
-        }
-      }, offset: 'bottom-in-view'
-    })
-    var waypoint2 = new Waypoint({
-      element: $('#p' + pageNumber + 's2'),
-      handler: function() {
-        console.log('Waypoint 2');
-        if($('.dots2').hasClass('hide')){
-          $('.dots2').removeClass('hide');
-        } else {
-          $('.dots2').addClass('hide');
-        }
-        if($('.btn2').hasClass('navFocus')){
-          $('.btn2').removeClass('navFocus');
-        } else {
-          $('.btn2').addClass('navFocus');
-        }
-      }, offset: 'bottom-in-view'
-    })
-    var waypoint3 = new Waypoint({
-      element: $('#p' + pageNumber + 's3'),
-      handler: function() {
-        console.log('Waypoint 3');
-        if($('.dots3').hasClass('hide')){
-          $('.dots3').removeClass('hide');
-        } else {
-          $('.dots3').addClass('hide');
-        }
-        if($('.btn3').hasClass('navFocus')){
-          $('.btn3').removeClass('navFocus');
-        } else {
-          $('.btn3').addClass('navFocus');
-        }
-      }, offset: 'bottom-in-view'
-    })
-    var waypoint4 = new Waypoint({
-      element: $('#p' + pageNumber + 's4'),
-      handler: function() {
-        console.log('Waypoint 4');
-        if($('.dots4').hasClass('hide')){
-          $('.dots4').removeClass('hide');
-        } else {
-          $('.dots4').addClass('hide');
-        }
-        if($('.btn4').hasClass('navFocus')){
-          $('.btn4').removeClass('navFocus');
-        } else {
-          $('.btn4').addClass('navFocus');
-        }
-      }, offset: 'bottom-in-view'
-    })
-    var waypoint5 = new Waypoint({
-      element: $('#p' + pageNumber + 's5'),
-      handler: function() {
-        console.log('Waypoint 5');
-        if($('.dots5').hasClass('hide')){
-          $('.dots5').removeClass('hide');
-        } else {
-          $('.dots5').addClass('hide');
-        }
-        if($('.btn5').hasClass('navFocus')){
-          $('.btn5').removeClass('navFocus');
-        } else {
-          $('.btn5').addClass('navFocus');
-        }
-      }, offset: 'bottom-in-view'
-    })
-    var waypoint6 = new Waypoint({
-      element: $('#p' + pageNumber + 's6'),
-      handler: function() {
-        console.log('Waypoint 6');
-        if($('.dots6').hasClass('hide')){
-          $('.dots6').removeClass('hide');
-        } else {
-          $('.dots6').addClass('hide');
-        }
-        if($('.btn6').hasClass('navFocus')){
-          $('.btn6').removeClass('navFocus');
-        } else {
-          $('.btn6').addClass('navFocus');
-        }
-      }, offset: 'bottom-in-view'
-    })
-  })
-};
+      }
+    };
+  
+    // --- Page content loading--- //
+    function loadHomePage() {
+      if (currentPage !== "home") {
+          clearPage();
+          currentPage = "home";
+      }
+  
+      showLoader();
+  
+      setTimeout(() => {
+          fetch('portfolio.json')
+              .then(response => response.json())
+              .then(data => {
+                  let homeData = data.homepage;
 
+                  // Store currently active page before rebuilding nav
+                  let currentActive = $('.nav.thumb.active').attr('id'); 
 
-// Sidebar buttons
-$(document).ready(function() {
-  $(".btn0").click(function() {
-    $("html").animate({
-        scrollTop: $("#p1s0").offset().top -220
-      }, 800 //speed
-    );
-  });
-  $(".btn1").click(function() {
-    $("html").animate({
-        scrollTop: $("#p1s1").offset().top -220
-      }, 800 //speed
-    );
-  });
-  $(".btn2").click(function() {
-    $("html").animate({
-        scrollTop: $("#p1s2").offset().top -220
-      }, 800 //speed
-    );
-  });
-  $(".btn3").click(function() {
-    $("html").animate({
-        scrollTop: $("#p1s3").offset().top -220
-      }, 800 //speed
-    );
-  });
-  $(".btn4").click(function() {
-    $("html").animate({
-        scrollTop: $("#p1s4").offset().top -220
-      }, 800 //speed
-    );
-  });
-  $(".btn5").click(function() {
-    console.log("Click to Section 2");
-    $("html").animate({
-        scrollTop: $("#p1s5").offset().top -220
-      }, 800 //speed
-    );
-  });
-  $(".btn6").click(function() {
-    console.log("Click to Section 2");
-    $("html").animate({
-        scrollTop: $("#p1s6").offset().top -220
-      }, 800 //speed
-    );
-  });
+                  // 🔹 Add Home Thumbnail
+                  let navHTML = `
+                      <div class="nav-item">
+                          <img src="${homeData.thumbnail}" alt="Home" class="nav thumb active" id="home">
+                      </div>
+                  `;
+                  // 🔹 Add Project Thumbnails
+                  homeData.projects.forEach(project => {
+                    navHTML += `
+                        <div class="nav-item">
+                            <img src="${project.thumbnail}" alt="${project.title}" class="nav thumb" id="${project.id}">
+                        </div>
+                    `;
+                  });
+
+                  // inject thumbnails into nav
+                  $('#navBar').html(navHTML);
+
+                  // Reapply active state to the ccurrent thumbnail
+                  if (currentActive) {
+                    $('#' + currentActive).addClass('active');
+                  }
+
+                  // Attach Click Events to Project Thumbnails
+                  $('.nav.thumb').on('click', function () {
+                    $('.nav.thumb').removeClass('active');
+                    $(this).addClass('active');
+                
+                    let pageId = $(this).attr('id');
+                    if (pageId === "home") {
+                        loadHomePage();
+                    } else {
+                        loadProjectPage(pageId);
+                    }
+                  });
+  
+                  // 💡 Regenerate homeContent structure
+                  $('#homeContent').html(`
+                      <div id="aboutMe"></div>
+                      <div id="skills"></div>
+                      <div id="work"></div>
+                  `).removeClass('hide').addClass('fade-in');
+  
+                  // Populate About Me
+                  $('#aboutMe').html(`<h2>${homeData.about.title}</h2><p>${homeData.about.text}</p>`);
+  
+                  // Populate Skills
+                  let skillsHTML = `
+                      <h1>${homeData.skills.title}</h1>
+                      <div class="line"></div>
+                      <h2>Tools</h2><p>${homeData.skills.tools}</p>
+                      <h2>Soft Skills</h2><p>${homeData.skills.soft_skills}</p>
+                      <h2>Design Skills</h2><p>${homeData.skills.design_skills}</p>
+                  `;
+                  homeData.skills.education.forEach(edu => {
+                      skillsHTML += `<h2>${edu.degree}</h2><div class="line"></div><h3>${edu.institution}</h3><p>${edu.description}</p>`;
+                  });
+                  $('#skills').html(skillsHTML);
+  
+                  // Populate Projects
+                  let workHTML = `<h1>UX Work</h1><div class="line"></div>`;
+                  homeData.projects.forEach(project => {
+                      workHTML += `
+                          <div class="project">
+                              <div class="projTitle">
+                                  <h2>${project.title}</h2><h3>${project.category}</h3>
+                              </div>
+                              <div class="projDesc"><p>${project.description}</p></div>
+                              <div class="projImg">
+                                  <p><img id="${project.id}" src="${project.thumbnail}" class="nav project-link"></p>
+                              </div>
+                          </div>
+                      `;
+                  });
+                  $('#work').html(workHTML);
+  
+                  hideLoader();
+              })
+              .catch(error => {
+                  console.error("Error loading JSON:", error);
+                  hideLoader();
+              });
+      }, 300);
+  }
+  
+  function loadProjectPage(projectId) {
+    if (currentPage !== projectId) {
+      clearPage();
+      currentPage = projectId;
+    }
+
+    showLoader();
+
+    setTimeout(() => {
+      fetch('portfolio.json')
+        .then(response => response.json())
+        .then(data => {
+          let project = data.projects.find(p => p.id === projectId);
+
+          if (!project) {
+            console.error("Project not found!");
+            hideLoader();
+            return;
+          }
+
+          let projectHTML = `
+            <div class="pTitle fade-in">
+              <h1>${project.title}</h1><p>${project.overview}</p>
+              <img src="${project.image}" alt="${project.title}">
+            </div>
+            <div class="sections">
+          `;
+
+          project.sections.forEach(section => {
+            projectHTML += `
+              <div class="pSection fade-in">
+                <h2>${section.title}</h2><p>${section.text}</p>
+                <img src="${section.image}" alt="${section.title}">
+              </div>
+            `;
+          });
+
+          projectHTML += `</div>`;
+          $('#portfolioContent').html(projectHTML).removeClass('hide').addClass('fade-in');
+
+          hideLoader();
+        })
+        .catch(error => {
+          console.error("Error loading JSON:", error);
+          hideLoader();
+        });
+    }, 300);
+  }
+
+  function clearPage() {
+    $(window).scrollTop(0);
+    $('#homeContent').addClass('fade-out').empty().addClass('hide');
+    $('#portfolioContent').addClass('fade-out').empty().addClass('hide');
+  }
+
+  // 🚀 On page load, check if a project is in the URL (deep linking)
+  const urlParams = new URLSearchParams(window.location.search);
+  const pageParam = urlParams.get('page');
+
+  if (pageParam && pageParam !== "home") {
+    loadProjectPage(pageParam);
+  } else {
+    loadHomePage();
+  }
 });
-
-// Hero animation
-$(document).ready(function() {   
-    function animateCloud1() {
-        $('#cloud1').animate({
-            'right':'-200px'
-        }
-            ,52000, 'linear'
-        )
-        .animate(
-            {'right':'1600px'}
-            ,1
-            ,animateCloud1
-        ); 
-    }
-    animateCloud1();
-}); 
-$(document).ready(function() {   
-    function animateCloud2() {
-        $('#cloud2').animate({
-            'left':'1400px'
-        }
-            ,25000, 'linear'
-        )
-        .animate(
-            {'left':'100px'}
-            ,1, 'linear'
-            ,animateCloud2
-        ); 
-    }
-    animateCloud2();
-}); 
-
+  
